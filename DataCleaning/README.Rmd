@@ -1,9 +1,10 @@
----
-title: "Creating a Tidy Data Set from Human Activity Recognition (HAR) Smartphone Data"
-author: "Lisa Murray"
-date: "7/4/2019"
-output: html_document
----
+## Creating a Tidy Data Set from Human Activity Recognition (HAR) Smartphone Data
+### README.md
+
+#### Getting and Cleaning Data Course -- Final Project
+#### *Lisa Murray*
+
+## Project Overview
 
 This project is the final project for the Johns Hopkins University course "Getting and Cleaning Data", as part of its Specialization in Data Science.
 
