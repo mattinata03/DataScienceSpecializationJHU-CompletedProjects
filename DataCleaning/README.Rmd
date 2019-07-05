@@ -1,5 +1,5 @@
 ## Creating a Tidy Data Set from Human Activity Recognition (HAR) Smartphone Data
-### README.md
+### README.Rmd
 
 #### Getting and Cleaning Data Course -- Final Project
 #### *Lisa Murray*
