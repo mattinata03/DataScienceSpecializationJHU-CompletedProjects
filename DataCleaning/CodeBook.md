@@ -92,6 +92,7 @@ Label   Variable          Class       # unique  Missing  Description
 ##### (read from y_test.txt and y_train.txt)
 
 ##### Dimensions:
+
 ---------------------------------
 Feature                    Result
 ------------------------ --------
@@ -1258,6 +1259,7 @@ Label   Variable                                     Class       # unique  Missi
 Result from binding columns of the testHAR and trainHAR datasets *(only the std() and mean() measurements are included in these files -- this data was removed from the xtest and ytest earlier in run_analysis.R -- see README.md for details)*
 
 ##### Dimensions:
+
 ---------------------------------
 Feature                    Result
 ------------------------ --------
@@ -1438,6 +1440,7 @@ Label   Variable                                Class       # unique  Missing  D
 ### meltHAR
 
 ##### Dimensions:
+
 ---------------------------------
 Feature                    Result
 ------------------------ --------
@@ -1483,6 +1486,7 @@ This data set has the same layout as the final file **tidyHAR** the only differe
 The final clean data set
 
 ##### Dimensions:
+
 ---------------------------------
 Feature                    Result
 ------------------------ --------

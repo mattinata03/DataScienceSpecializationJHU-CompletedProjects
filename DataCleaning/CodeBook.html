@@ -379,8 +379,8 @@ $(document).ready(function () {
 
 <div id="creating-a-tidy-data-set-from-human-activity-recognition-har-smartphone-data" class="section level2">
 <h2>Creating a Tidy Data Set from Human Activity Recognition (HAR) Smartphone Data</h2>
-<div id="codebook.md" class="section level3">
-<h3>CodeBook.md</h3>
+<div id="codebook.rmd" class="section level3">
+<h3>CodeBook.Rmd</h3>
 <div id="getting-and-cleaning-data-course-final-project" class="section level4">
 <h4>Getting and Cleaning Data Course – Final Project</h4>
 </div>
@@ -618,11 +618,13 @@ $(document).ready(function () {
 <div id="read-from-y_test.txt-and-y_train.txt" class="section level5">
 <h5>(read from y_test.txt and y_train.txt)</h5>
 </div>
-</div>
-</div>
-<div id="dimensions-3" class="section level2">
-<h2>##### Dimensions:</h2>
-<table>
+<div id="dimensions-3" class="section level5">
+<h5>Dimensions:</h5>
+<table style="width:47%;">
+<colgroup>
+<col width="34%"></col>
+<col width="12%"></col>
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Feature</th>
@@ -634,11 +636,14 @@ $(document).ready(function () {
 <td align="left">Number of observations</td>
 <td align="right">2947 <em>7352 for y_train)</em></td>
 </tr>
+<tr class="even">
+<td align="left">Number of variables</td>
+<td align="right">1</td>
+</tr>
 </tbody>
 </table>
 </div>
-<div id="number-of-variables-1" class="section level2">
-<h2>Number of variables 1</h2>
+</div>
 </div>
 <div id="codebook-summary-table" class="section level1">
 <h1>Codebook summary table</h1>
@@ -5222,10 +5227,13 @@ $(document).ready(function () {
 <div id="testhar-trainhar-datahar" class="section level3">
 <h3>testHAR / trainHAR / dataHAR</h3>
 <p>Result from binding columns of the testHAR and trainHAR datasets <em>(only the std() and mean() measurements are included in these files – this data was removed from the xtest and ytest earlier in run_analysis.R – see README.md for details)</em></p>
-</div>
-<div id="dimensions-5" class="section level2">
-<h2>##### Dimensions:</h2>
-<table>
+<div id="dimensions-5" class="section level5">
+<h5>Dimensions:</h5>
+<table style="width:47%;">
+<colgroup>
+<col width="34%"></col>
+<col width="12%"></col>
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Feature</th>
@@ -5237,11 +5245,13 @@ $(document).ready(function () {
 <td align="left">Number of observations</td>
 <td align="right">10299 <em>(7352 for trainHAR, 2947 for testHAR)</em></td>
 </tr>
+<tr class="even">
+<td align="left">Number of variables</td>
+<td align="right">81</td>
+</tr>
 </tbody>
 </table>
 </div>
-<div id="number-of-variables-81" class="section level2">
-<h2>Number of variables 81</h2>
 <div id="summary-table-4" class="section level5">
 <h5>Summary table</h5>
 <table>
@@ -5915,13 +5925,16 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
+</div>
 <div id="melthar" class="section level3">
 <h3>meltHAR</h3>
-</div>
-</div>
-<div id="dimensions-6" class="section level2">
-<h2>##### Dimensions:</h2>
-<table>
+<div id="dimensions-6" class="section level5">
+<h5>Dimensions:</h5>
+<table style="width:47%;">
+<colgroup>
+<col width="34%"></col>
+<col width="12%"></col>
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Feature</th>
@@ -5933,11 +5946,13 @@ $(document).ready(function () {
 <td align="left">Number of observations</td>
 <td align="right">813621</td>
 </tr>
+<tr class="even">
+<td align="left">Number of variables</td>
+<td align="right">4</td>
+</tr>
 </tbody>
 </table>
 </div>
-<div id="number-of-variables-4" class="section level2">
-<h2>Number of variables 4</h2>
 <div id="summary-table-5" class="section level4">
 <h4>Summary table</h4>
 <table>
@@ -6022,14 +6037,17 @@ $(document).ready(function () {
 </ol>
 </div>
 </div>
+</div>
 <div id="tidyhar" class="section level3">
 <h3>tidyHAR</h3>
 <p>The final clean data set</p>
-</div>
-</div>
-<div id="dimensions-7" class="section level2">
-<h2>##### Dimensions:</h2>
-<table>
+<div id="dimensions-7" class="section level5">
+<h5>Dimensions:</h5>
+<table style="width:47%;">
+<colgroup>
+<col width="34%"></col>
+<col width="12%"></col>
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Feature</th>
@@ -6041,11 +6059,13 @@ $(document).ready(function () {
 <td align="left">Number of observations</td>
 <td align="right">180</td>
 </tr>
+<tr class="even">
+<td align="left">Number of variables</td>
+<td align="right">82</td>
+</tr>
 </tbody>
 </table>
 </div>
-<div id="number-of-variables-82" class="section level2">
-<h2>Number of variables 82</h2>
 <div id="summary-table-6" class="section level5">
 <h5>Summary table:</h5>
 <table>
@@ -6727,13 +6747,13 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
+</div>
 <div id="acknowledgments" class="section level3">
 <h3>Acknowledgments</h3>
 <ul>
 <li>makeCodebook from the package dataMaid was used to create part of this CodeBook</li>
 <li>[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012</li>
 </ul>
-</div>
 </div>
 </div>
 
