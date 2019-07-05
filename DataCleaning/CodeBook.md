@@ -1,3 +1,7 @@
+---
+output:
+  html_document: default
+---
 ## Creating a Tidy Data Set from Human Activity Recognition (HAR) Smartphone Data
 ### CodeBook.md
 
@@ -23,1234 +27,654 @@ Description of the raw data files *(taken from the README.txt from the Human Act
 
 ##### Dimensions:
 
----------------------------------
-Feature                    Result
------------------------- --------
-Number of observations          6
 
-Number of variables             2
----------------------------------
+|Feature                 |   Result|
+|------------------------|---------|
+|Number of observations  |        6|
+|Number of variables     |        2|
 
-##### Summary table
 
----------------------------------------------------------------------------
-Label   Variable             Class         # unique  Missing  Description  
-                                             values                        
-------- -------------------- ----------- ---------- --------- -------------
-        **[activityCode]**   integer              6  0.00 %                
+##### Summary Table:
 
-        **[activity]**       character            6  0.00 %                
----------------------------------------------------------------------------
+
+|Variable              | Class     |                           
+|----------------------|-----------|
+| activityCode         | integer   |                         
+| activity             | character |
 
 ### headerFile
 ##### (read from features_info.txt)
 
 ##### Dimensions:
 
----------------------------------
-Feature                    Result
------------------------- --------
-Number of observations        561
+|Feature                 |   Result|
+|------------------------|---------|
+|Number of observations  |      561|
+|Number of variables     |       2 |
 
-Number of variables             2
----------------------------------
 
-##### Summary table
+##### Summary Table:
 
------------------------------------------------------------------
-Label   Variable     Class       # unique  Missing  Description  
-                                   values                        
-------- ------------ --------- ---------- --------- -------------
-        **[key]**    integer          561  0.00 %                
+|Variable              | Class     |                           
+|----------------------|-----------|
+|key    | integer          561  0.00 %                
+|name   factor           477  0.00 %                
 
-        **[name]**   factor           477  0.00 %                
------------------------------------------------------------------
 
 ### subtest / subtrain
 ##### (read from subject_test.txt and subject_train.txt)
 
 ##### Dimensions:
 
----------------------------------
-Feature                    Result
------------------------- --------
-Number of observations       2947
 
-Number of variables             1
----------------------------------
+|Feature                 |   Result|
+|------------------------|---------|
+|Number of observations  |     2947|
+|Number of variables     |       1 |
 
-##### Summary table
 
-----------------------------------------------------------------------
-Label   Variable          Class       # unique  Missing  Description  
-                                        values                        
-------- ----------------- --------- ---------- --------- -------------
-        **[subjectID]**   integer            9  0.00 %                
-----------------------------------------------------------------------
+##### Summary Table:
+
+
+|Variable              | Class     |                           
+|----------------------|-----------|
+|subjectID             | integer   |
 
 ### ytest / ytrain
 ##### (read from y_test.txt and y_train.txt)
 
 ##### Dimensions:
 
----------------------------------
-Feature                    Result
------------------------- --------
-Number of observations       2947 *7352 for y_train)*
+|Feature                 |   Result|
+|------------------------|---------|
+|Number of observations  |     2947|
+|Number of variables     |        1|
+*(7352 observations for y_train)*
 
-Number of variables             1
----------------------------------
+##### Summary Table:
 
-# Codebook summary table
 
--------------------------------------------------------------------------
-Label   Variable             Class       # unique  Missing  Description  
-                                           values                        
-------- -------------------- --------- ---------- --------- -------------
-        **[activityCode]**   integer            6  0.00 %                
--------------------------------------------------------------------------
+|Variable              | Class     |                           
+|----------------------|-----------|
+|activityCode          | integer   |
 
 ### xtest / xtrain
 ##### (read from x_test.txt and x_train.txt)
 
 ##### Dimensions:
 
----------------------------------
-Feature                    Result
------------------------- --------
-Number of observations       2947 *7352 for y_train)*
+|Feature                 |   Result|
+|------------------------|---------|
+|Number of observations  |     2947|
+|Number of variables     |      561|
+
+
+##### Summary Table:
+
+|Variable                              | Class   |
+|--------------------------------------|---------|
+|tBodyAcc-mean()-X                     | numeric |
+|tBodyAcc-mean()-Y                     | numeric |
+|tBodyAcc-mean()-Z                     | numeric |
+|tBodyAcc-std()-X                      | numeric |
+|tBodyAcc-std()-Y                      | numeric |
+|tBodyAcc-std()-Z                      | numeric |
+|tBodyAcc-mad()-X                      | numeric |
+|tBodyAcc-mad()-Y                      | numeric |
+|tBodyAcc-mad()-Z                      | numeric |
+|tBodyAcc-max()-X                      | numeric |
+|tBodyAcc-max()-Y                      | numeric |
+|tBodyAcc-max()-Z                      | numeric |
+|tBodyAcc-min()-X                      | numeric |
+|tBodyAcc-min()-Y                      | numeric |
+|tBodyAcc-min()-Z                      | numeric |
+|tBodyAcc-sma()                        | numeric |
+|tBodyAcc-energy()-X                   | numeric |
+|tBodyAcc-energy()-Y                   | numeric |
+|tBodyAcc-energy()-Z                   | numeric |
+|tBodyAcc-iqr()-X                      | numeric |
+|tBodyAcc-iqr()-Y                      | numeric |
+|tBodyAcc-iqr()-Z                      | numeric |
+|tBodyAcc-entropy()-X                  | numeric |
+|tBodyAcc-entropy()-Y                  | numeric |
+|tBodyAcc-entropy()-Z                  | numeric |
+|tBodyAcc-arCoeff()-X,1                | numeric |
+|tBodyAcc-arCoeff()-X,2                | numeric |
+|tBodyAcc-arCoeff()-X,3                | numeric |
+|tBodyAcc-arCoeff()-X,4                | numeric |
+|tBodyAcc-arCoeff()-Y,1                | numeric |
+|tBodyAcc-arCoeff()-Y,2                | numeric |
+|tBodyAcc-arCoeff()-Y,3                | numeric |
+|tBodyAcc-arCoeff()-Y,4                | numeric |
+|tBodyAcc-arCoeff()-Z,1                | numeric |
+|tBodyAcc-arCoeff()-Z,2                | numeric |
+|tBodyAcc-arCoeff()-Z,3                | numeric |
+|tBodyAcc-arCoeff()-Z,4                | numeric |
+|tBodyAcc-correlation()-X,Y            | numeric |
+|tBodyAcc-correlation()-X,Z            | numeric |
+|tBodyAcc-correlation()-Y,Z            | numeric |
+|tGravityAcc-mean()-X                  | numeric |
+|tGravityAcc-mean()-Y                  | numeric |
+|tGravityAcc-mean()-Z                  | numeric |
+|tGravityAcc-std()-X                   | numeric |
+|tGravityAcc-std()-Y                   | numeric |
+|tGravityAcc-std()-Z                   | numeric |
+|tGravityAcc-mad()-X                   | numeric |
+|tGravityAcc-mad()-Y                   | numeric |
+|tGravityAcc-mad()-Z                   | numeric |
+|tGravityAcc-max()-X                   | numeric |
+|tGravityAcc-max()-Y                   | numeric |
+|tGravityAcc-max()-Z                   | numeric |
+|tGravityAcc-min()-X                   | numeric |
+|tGravityAcc-min()-Y                   | numeric |
+|tGravityAcc-min()-Z                   | numeric |
+|tGravityAcc-sma()                     | numeric |
+|tGravityAcc-energy()-X                | numeric |
+|tGravityAcc-energy()-Y                | numeric |
+|tGravityAcc-energy()-Z                | numeric |
+|tGravityAcc-iqr()-X                   | numeric |
+|tGravityAcc-iqr()-Y                   | numeric |
+|tGravityAcc-iqr()-Z                   | numeric |
+|tGravityAcc-entropy()-X               | numeric |
+|tGravityAcc-entropy()-Y               | numeric |
+|tGravityAcc-entropy()-Z               | numeric |
+|tGravityAcc-arCoeff()-X,1             | numeric |
+|tGravityAcc-arCoeff()-X,2             | numeric |
+|tGravityAcc-arCoeff()-X,3             | numeric |
+|tGravityAcc-arCoeff()-X,4             | numeric |
+|tGravityAcc-arCoeff()-Y,1             | numeric |
+|tGravityAcc-arCoeff()-Y,2             | numeric |
+|tGravityAcc-arCoeff()-Y,3             | numeric |
+|tGravityAcc-arCoeff()-Y,4             | numeric |
+|tGravityAcc-arCoeff()-Z,1             | numeric |
+|tGravityAcc-arCoeff()-Z,2             | numeric |
+|tGravityAcc-arCoeff()-Z,3             | numeric |
+|tGravityAcc-arCoeff()-Z,4             | numeric |
+|tGravityAcc-correlation()-X,Y         | numeric |
+|tGravityAcc-correlation()-X,Z         | numeric |
+|tGravityAcc-correlation()-Y,Z         | numeric |
+|tBodyAccJerk-mean()-X                 | numeric |
+|tBodyAccJerk-mean()-Y                 | numeric |
+|tBodyAccJerk-mean()-Z                 | numeric |
+|tBodyAccJerk-std()-X                  | numeric |
+|tBodyAccJerk-std()-Y                  | numeric |
+|tBodyAccJerk-std()-Z                  | numeric |
+|tBodyAccJerk-mad()-X                  | numeric |
+|tBodyAccJerk-mad()-Y                  | numeric |
+|tBodyAccJerk-mad()-Z                  | numeric |
+|tBodyAccJerk-max()-X                  | numeric |
+|tBodyAccJerk-max()-Y                  | numeric |
+|tBodyAccJerk-max()-Z                  | numeric |
+|tBodyAccJerk-min()-X                  | numeric |
+|tBodyAccJerk-min()-Y                  | numeric |
+|tBodyAccJerk-min()-Z                  | numeric |
+|tBodyAccJerk-sma()                    | numeric |
+|tBodyAccJerk-energy()-X               | numeric |
+|tBodyAccJerk-energy()-Y               | numeric |
+|tBodyAccJerk-energy()-Z               | numeric |
+|tBodyAccJerk-iqr()-X                  | numeric |
+|tBodyAccJerk-iqr()-Y                  | numeric |
+|tBodyAccJerk-iqr()-Z                  | numeric |
+|tBodyAccJerk-entropy()-X              | numeric |
+|tBodyAccJerk-entropy()-Y              | numeric |
+|tBodyAccJerk-entropy()-Z              | numeric |
+|tBodyAccJerk-arCoeff()-X,1            | numeric |
+|tBodyAccJerk-arCoeff()-X,2            | numeric |
+|tBodyAccJerk-arCoeff()-X,3            | numeric |
+|tBodyAccJerk-arCoeff()-X,4            | numeric |
+|tBodyAccJerk-arCoeff()-Y,1            | numeric |
+|tBodyAccJerk-arCoeff()-Y,2            | numeric |
+|tBodyAccJerk-arCoeff()-Y,3            | numeric |
+|tBodyAccJerk-arCoeff()-Y,4            | numeric |
+|tBodyAccJerk-arCoeff()-Z,1            | numeric |
+|tBodyAccJerk-arCoeff()-Z,2            | numeric |
+|tBodyAccJerk-arCoeff()-Z,3            | numeric |
+|tBodyAccJerk-arCoeff()-Z,4            | numeric |
+|tBodyAccJerk-correlation()-X,Y        | numeric |
+|tBodyAccJerk-correlation()-X,Z        | numeric |
+|tBodyAccJerk-correlation()-Y,Z        | numeric |
+|tBodyGyro-mean()-X                    | numeric |
+|tBodyGyro-mean()-Y                    | numeric |
+|tBodyGyro-mean()-Z                    | numeric |
+|tBodyGyro-std()-X                     | numeric |
+|tBodyGyro-std()-Y                     | numeric |
+|tBodyGyro-std()-Z                     | numeric |
+|tBodyGyro-mad()-X                     | numeric |
+|tBodyGyro-mad()-Y                     | numeric |
+|tBodyGyro-mad()-Z                     | numeric |
+|tBodyGyro-max()-X                     | numeric |
+|tBodyGyro-max()-Y                     | numeric |
+|tBodyGyro-max()-Z                     | numeric |
+|tBodyGyro-min()-X                     | numeric |
+|tBodyGyro-min()-Y                     | numeric |
+|tBodyGyro-min()-Z                     | numeric |
+|tBodyGyro-sma()                       | numeric |
+|tBodyGyro-energy()-X                  | numeric |
+|tBodyGyro-energy()-Y                  | numeric |
+|tBodyGyro-energy()-Z                  | numeric |
+|tBodyGyro-iqr()-X                     | numeric |
+|tBodyGyro-iqr()-Y                     | numeric |
+|tBodyGyro-iqr()-Z                     | numeric |
+|tBodyGyro-entropy()-X                 | numeric |
+|tBodyGyro-entropy()-Y                 | numeric |
+|tBodyGyro-entropy()-Z                 | numeric |
+|tBodyGyro-arCoeff()-X,1               | numeric |
+|tBodyGyro-arCoeff()-X,2               | numeric |
+|tBodyGyro-arCoeff()-X,3               | numeric |
+|tBodyGyro-arCoeff()-X,4               | numeric |
+|tBodyGyro-arCoeff()-Y,1               | numeric |
+|tBodyGyro-arCoeff()-Y,2               | numeric |
+|tBodyGyro-arCoeff()-Y,3               | numeric |
+|tBodyGyro-arCoeff()-Y,4               | numeric |
+|tBodyGyro-arCoeff()-Z,1               | numeric |
+|tBodyGyro-arCoeff()-Z,2               | numeric |
+|tBodyGyro-arCoeff()-Z,3               | numeric |
+|tBodyGyro-arCoeff()-Z,4               | numeric |
+|tBodyGyro-correlation()-X,Y           | numeric |
+|tBodyGyro-correlation()-X,Z           | numeric |
+|tBodyGyro-correlation()-Y,Z           | numeric |
+|tBodyGyroJerk-mean()-X                | numeric |
+|tBodyGyroJerk-mean()-Y                | numeric |
+|tBodyGyroJerk-mean()-Z                | numeric |
+|tBodyGyroJerk-std()-X                 | numeric |
+|tBodyGyroJerk-std()-Y                 | numeric |
+|tBodyGyroJerk-std()-Z                 | numeric |
+|tBodyGyroJerk-mad()-X                 | numeric |
+|tBodyGyroJerk-mad()-Y                 | numeric |
+|tBodyGyroJerk-mad()-Z                 | numeric |
+|tBodyGyroJerk-max()-X                 | numeric |
+|tBodyGyroJerk-max()-Y                 | numeric |
+|tBodyGyroJerk-max()-Z                 | numeric |
+|tBodyGyroJerk-min()-X                 | numeric |
+|tBodyGyroJerk-min()-Y                 | numeric |
+|tBodyGyroJerk-min()-Z                 | numeric |
+|tBodyGyroJerk-sma()                   | numeric |
+|tBodyGyroJerk-energy()-X              | numeric |
+|tBodyGyroJerk-energy()-Y              | numeric |
+|tBodyGyroJerk-energy()-Z              | numeric |
+|tBodyGyroJerk-iqr()-X                 | numeric |
+|tBodyGyroJerk-iqr()-Y                 | numeric |
+|tBodyGyroJerk-iqr()-Z                 | numeric |
+|tBodyGyroJerk-entropy()-X             | numeric |
+|tBodyGyroJerk-entropy()-Y             | numeric |
+|tBodyGyroJerk-entropy()-Z             | numeric |
+|tBodyGyroJerk-arCoeff()-X,1           | numeric |
+|tBodyGyroJerk-arCoeff()-X,2           | numeric |
+|tBodyGyroJerk-arCoeff()-X,3           | numeric |
+|tBodyGyroJerk-arCoeff()-X,4           | numeric |
+|tBodyGyroJerk-arCoeff()-Y,1           | numeric |
+|tBodyGyroJerk-arCoeff()-Y,2           | numeric |
+|tBodyGyroJerk-arCoeff()-Y,3           | numeric |
+|tBodyGyroJerk-arCoeff()-Y,4           | numeric |
+|tBodyGyroJerk-arCoeff()-Z,1           | numeric |
+|tBodyGyroJerk-arCoeff()-Z,2           | numeric |
+|tBodyGyroJerk-arCoeff()-Z,3           | numeric |
+|tBodyGyroJerk-arCoeff()-Z,4           | numeric |
+|tBodyGyroJerk-correlation()-X,Y       | numeric |
+|tBodyGyroJerk-correlation()-X,Z       | numeric |
+|tBodyGyroJerk-correlation()-Y,Z       | numeric |
+|tBodyAccMag-mean()                    | numeric |
+|tBodyAccMag-std()                     | numeric |
+|tBodyAccMag-mad()                     | numeric |
+|tBodyAccMag-max()                     | numeric |
+|tBodyAccMag-min()                     | numeric |
+|tBodyAccMag-sma()                     | numeric |
+|tBodyAccMag-energy()                  | numeric |
+|tBodyAccMag-iqr()                     | numeric |
+|tBodyAccMag-entropy()                 | numeric |
+|tBodyAccMag-arCoeff()1                | numeric |
+|tBodyAccMag-arCoeff()2                | numeric |
+|tBodyAccMag-arCoeff()3                | numeric |
+|tBodyAccMag-arCoeff()4                | numeric |
+|tGravityAccMag-mean()                 | numeric |
+|tGravityAccMag-std()                  | numeric |
+|tGravityAccMag-mad()                  | numeric |
+|tGravityAccMag-max()                  | numeric |
+|tGravityAccMag-min()                  | numeric |
+|tGravityAccMag-sma()                  | numeric |
+|tGravityAccMag-energy()               | numeric |
+|tGravityAccMag-iqr()                  | numeric |
+|tGravityAccMag-entropy()              | numeric |
+|tGravityAccMag-arCoeff()1             | numeric |
+|tGravityAccMag-arCoeff()2             | numeric |
+|tGravityAccMag-arCoeff()3             | numeric |
+|tGravityAccMag-arCoeff()4             | numeric |
+|tBodyAccJerkMag-mean()                | numeric |
+|tBodyAccJerkMag-std()                 | numeric |
+|tBodyAccJerkMag-mad()                 | numeric |
+|tBodyAccJerkMag-max()                 | numeric |
+|tBodyAccJerkMag-min()                 | numeric |
+|tBodyAccJerkMag-sma()                 | numeric |
+|tBodyAccJerkMag-energy()              | numeric |
+|tBodyAccJerkMag-iqr()                 | numeric |
+|tBodyAccJerkMag-entropy()             | numeric |
+|tBodyAccJerkMag-arCoeff()1            | numeric |
+|tBodyAccJerkMag-arCoeff()2            | numeric |
+|tBodyAccJerkMag-arCoeff()3            | numeric |
+|tBodyAccJerkMag-arCoeff()4            | numeric |
+|tBodyGyroMag-mean()                   | numeric |
+|tBodyGyroMag-std()                    | numeric |
+|tBodyGyroMag-mad()                    | numeric |
+|tBodyGyroMag-max()                    | numeric |
+|tBodyGyroMag-min()                    | numeric |
+|tBodyGyroMag-sma()                    | numeric |
+|tBodyGyroMag-energy()                 | numeric |
+|tBodyGyroMag-iqr()                    | numeric |
+|tBodyGyroMag-entropy()                | numeric |
+|tBodyGyroMag-arCoeff()1               | numeric |
+|tBodyGyroMag-arCoeff()2               | numeric |
+|tBodyGyroMag-arCoeff()3               | numeric |
+|tBodyGyroMag-arCoeff()4               | numeric |
+|tBodyGyroJerkMag-mean()               | numeric |
+|tBodyGyroJerkMag-std()                | numeric |
+|tBodyGyroJerkMag-mad()                | numeric |
+|tBodyGyroJerkMag-max()                | numeric |
+|tBodyGyroJerkMag-min()                | numeric |
+|tBodyGyroJerkMag-sma()                | numeric |
+|tBodyGyroJerkMag-energy()             | numeric |
+|tBodyGyroJerkMag-iqr()                | numeric |
+|tBodyGyroJerkMag-entropy()            | numeric |
+|tBodyGyroJerkMag-arCoeff()1           | numeric |
+|tBodyGyroJerkMag-arCoeff()2           | numeric |
+|tBodyGyroJerkMag-arCoeff()3           | numeric |
+|tBodyGyroJerkMag-arCoeff()4           | numeric |
+|fBodyAcc-mean()-X                     | numeric |
+|fBodyAcc-mean()-Y                     | numeric |
+|fBodyAcc-mean()-Z                     | numeric |
+|fBodyAcc-std()-X                      | numeric |
+|fBodyAcc-std()-Y                      | numeric |
+|fBodyAcc-std()-Z                      | numeric |
+|fBodyAcc-mad()-X                      | numeric |
+|fBodyAcc-mad()-Y                      | numeric |
+|fBodyAcc-mad()-Z                      | numeric |
+|fBodyAcc-max()-X                      | numeric |
+|fBodyAcc-max()-Y                      | numeric |
+|fBodyAcc-max()-Z                      | numeric |
+|fBodyAcc-min()-X                      | numeric |
+|fBodyAcc-min()-Y                      | numeric |
+|fBodyAcc-min()-Z                      | numeric |
+|fBodyAcc-sma()                        | numeric |
+|fBodyAcc-energy()-X                   | numeric |
+|fBodyAcc-energy()-Y                   | numeric |
+|fBodyAcc-energy()-Z                   | numeric |
+|fBodyAcc-iqr()-X                      | numeric |
+|fBodyAcc-iqr()-Y                      | numeric |
+|fBodyAcc-iqr()-Z                      | numeric |
+|fBodyAcc-entropy()-X                  | numeric |
+|fBodyAcc-entropy()-Y                  | numeric |
+|fBodyAcc-entropy()-Z                  | numeric |
+|fBodyAcc-maxInds-X                    | numeric |
+|fBodyAcc-maxInds-Y                    | numeric |
+|fBodyAcc-maxInds-Z                    | numeric |
+|fBodyAcc-meanFreq()-X                 | numeric |
+|fBodyAcc-meanFreq()-Y                 | numeric |
+|fBodyAcc-meanFreq()-Z                 | numeric |
+|fBodyAcc-skewness()-X                 | numeric |
+|fBodyAcc-kurtosis()-X                 | numeric |
+|fBodyAcc-skewness()-Y                 | numeric |
+|fBodyAcc-kurtosis()-Y                 | numeric |
+|fBodyAcc-skewness()-Z                 | numeric |
+|fBodyAcc-kurtosis()-Z                 | numeric |
+|fBodyAcc-bandsEnergy()-1,8            | numeric |
+|fBodyAcc-bandsEnergy()-9,16           | numeric |
+|fBodyAcc-bandsEnergy()-17,24          | numeric |
+|fBodyAcc-bandsEnergy()-25,32          | numeric |
+|fBodyAcc-bandsEnergy()-33,40          | numeric |
+|fBodyAcc-bandsEnergy()-41,48          | numeric |
+|fBodyAcc-bandsEnergy()-49,56          | numeric |
+|fBodyAcc-bandsEnergy()-57,64          | numeric |
+|fBodyAcc-bandsEnergy()-1,16           | numeric |
+|fBodyAcc-bandsEnergy()-17,32          | numeric |
+|fBodyAcc-bandsEnergy()-33,48          | numeric |
+|fBodyAcc-bandsEnergy()-49,64          | numeric |
+|fBodyAcc-bandsEnergy()-1,24           | numeric |
+|fBodyAcc-bandsEnergy()-25,48          | numeric |
+|fBodyAcc-bandsEnergy()-1,8            | numeric |
+|fBodyAcc-bandsEnergy()-9,16           | numeric |
+|fBodyAcc-bandsEnergy()-17,24          | numeric |
+|fBodyAcc-bandsEnergy()-25,32          | numeric |
+|fBodyAcc-bandsEnergy()-33,40          | numeric |
+|fBodyAcc-bandsEnergy()-41,48          | numeric |
+|fBodyAcc-bandsEnergy()-49,56          | numeric |
+|fBodyAcc-bandsEnergy()-57,64          | numeric |
+|fBodyAcc-bandsEnergy()-1,16           | numeric |
+|fBodyAcc-bandsEnergy()-17,32          | numeric |
+|fBodyAcc-bandsEnergy()-33,48          | numeric |
+|fBodyAcc-bandsEnergy()-49,64          | numeric |
+|fBodyAcc-bandsEnergy()-1,24           | numeric |
+|fBodyAcc-bandsEnergy()-25,48          | numeric |
+|fBodyAcc-bandsEnergy()-1,8            | numeric |
+|fBodyAcc-bandsEnergy()-9,16           | numeric |
+|fBodyAcc-bandsEnergy()-17,24          | numeric |
+|fBodyAcc-bandsEnergy()-25,32          | numeric |
+|fBodyAcc-bandsEnergy()-33,40          | numeric |
+|fBodyAcc-bandsEnergy()-41,48          | numeric |
+|fBodyAcc-bandsEnergy()-49,56          | numeric |
+|fBodyAcc-bandsEnergy()-57,64          | numeric |
+|fBodyAcc-bandsEnergy()-1,16           | numeric |
+|fBodyAcc-bandsEnergy()-17,32          | numeric |
+|fBodyAcc-bandsEnergy()-33,48          | numeric |
+|fBodyAcc-bandsEnergy()-49,64          | numeric |
+|fBodyAcc-bandsEnergy()-1,24           | numeric |
+|fBodyAcc-bandsEnergy()-25,48          | numeric |
+|fBodyAccJerk-mean()-X                 | numeric |
+|fBodyAccJerk-mean()-Y                 | numeric |
+|fBodyAccJerk-mean()-Z                 | numeric |
+|fBodyAccJerk-std()-X                  | numeric |
+|fBodyAccJerk-std()-Y                  | numeric |
+|fBodyAccJerk-std()-Z                  | numeric |
+|fBodyAccJerk-mad()-X                  | numeric |
+|fBodyAccJerk-mad()-Y                  | numeric |
+|fBodyAccJerk-mad()-Z                  | numeric |
+|fBodyAccJerk-max()-X                  | numeric |
+|fBodyAccJerk-max()-Y                  | numeric |
+|fBodyAccJerk-max()-Z                  | numeric |
+|fBodyAccJerk-min()-X                  | numeric |
+|fBodyAccJerk-min()-Y                  | numeric |
+|fBodyAccJerk-min()-Z                  | numeric |
+|fBodyAccJerk-sma()                    | numeric |
+|fBodyAccJerk-energy()-X               | numeric |
+|fBodyAccJerk-energy()-Y               | numeric |
+|fBodyAccJerk-energy()-Z               | numeric |
+|fBodyAccJerk-iqr()-X                  | numeric |
+|fBodyAccJerk-iqr()-Y                  | numeric |
+|fBodyAccJerk-iqr()-Z                  | numeric |
+|fBodyAccJerk-entropy()-X              | numeric |
+|fBodyAccJerk-entropy()-Y              | numeric |
+|fBodyAccJerk-entropy()-Z              | numeric |
+|fBodyAccJerk-maxInds-X                | numeric |
+|fBodyAccJerk-maxInds-Y                | numeric |
+|fBodyAccJerk-maxInds-Z                | numeric |
+|fBodyAccJerk-meanFreq()-X             | numeric |
+|fBodyAccJerk-meanFreq()-Y             | numeric |
+|fBodyAccJerk-meanFreq()-Z             | numeric |
+|fBodyAccJerk-skewness()-X             | numeric |
+|fBodyAccJerk-kurtosis()-X             | numeric |
+|fBodyAccJerk-skewness()-Y             | numeric |
+|fBodyAccJerk-kurtosis()-Y             | numeric |
+|fBodyAccJerk-skewness()-Z             | numeric |
+|fBodyAccJerk-kurtosis()-Z             | numeric |
+|fBodyAccJerk-bandsEnergy()-1,8        | numeric |
+|fBodyAccJerk-bandsEnergy()-9,16       | numeric |
+|fBodyAccJerk-bandsEnergy()-17,24      | numeric |
+|fBodyAccJerk-bandsEnergy()-25,32      | numeric |
+|fBodyAccJerk-bandsEnergy()-33,40      | numeric |
+|fBodyAccJerk-bandsEnergy()-41,48      | numeric |
+|fBodyAccJerk-bandsEnergy()-49,56      | numeric |
+|fBodyAccJerk-bandsEnergy()-57,64      | numeric |
+|fBodyAccJerk-bandsEnergy()-1,16       | numeric |
+|fBodyAccJerk-bandsEnergy()-17,32      | numeric |
+|fBodyAccJerk-bandsEnergy()-33,48      | numeric |
+|fBodyAccJerk-bandsEnergy()-49,64      | numeric |
+|fBodyAccJerk-bandsEnergy()-1,24       | numeric |
+|fBodyAccJerk-bandsEnergy()-25,48      | numeric |
+|fBodyAccJerk-bandsEnergy()-1,8        | numeric |
+|fBodyAccJerk-bandsEnergy()-9,16       | numeric |
+|fBodyAccJerk-bandsEnergy()-17,24      | numeric |
+|fBodyAccJerk-bandsEnergy()-25,32      | numeric |
+|fBodyAccJerk-bandsEnergy()-33,40      | numeric |
+|fBodyAccJerk-bandsEnergy()-41,48      | numeric |
+|fBodyAccJerk-bandsEnergy()-49,56      | numeric |
+|fBodyAccJerk-bandsEnergy()-57,64      | numeric |
+|fBodyAccJerk-bandsEnergy()-1,16       | numeric |
+|fBodyAccJerk-bandsEnergy()-17,32      | numeric |
+|fBodyAccJerk-bandsEnergy()-33,48      | numeric |
+|fBodyAccJerk-bandsEnergy()-49,64      | numeric |
+|fBodyAccJerk-bandsEnergy()-1,24       | numeric |
+|fBodyAccJerk-bandsEnergy()-25,48      | numeric |
+|fBodyAccJerk-bandsEnergy()-1,8        | numeric |
+|fBodyAccJerk-bandsEnergy()-9,16       | numeric |
+|fBodyAccJerk-bandsEnergy()-17,24      | numeric |
+|fBodyAccJerk-bandsEnergy()-25,32      | numeric |
+|fBodyAccJerk-bandsEnergy()-33,40      | numeric |
+|fBodyAccJerk-bandsEnergy()-41,48      | numeric |
+|fBodyAccJerk-bandsEnergy()-49,56      | numeric |
+|fBodyAccJerk-bandsEnergy()-57,64      | numeric |
+|fBodyAccJerk-bandsEnergy()-1,16       | numeric |
+|fBodyAccJerk-bandsEnergy()-17,32      | numeric |
+|fBodyAccJerk-bandsEnergy()-33,48      | numeric |
+|fBodyAccJerk-bandsEnergy()-49,64      | numeric |
+|fBodyAccJerk-bandsEnergy()-1,24       | numeric |
+|fBodyAccJerk-bandsEnergy()-25,48      | numeric |
+|fBodyGyro-mean()-X                    | numeric |
+|fBodyGyro-mean()-Y                    | numeric |
+|fBodyGyro-mean()-Z                    | numeric |
+|fBodyGyro-std()-X                     | numeric |
+|fBodyGyro-std()-Y                     | numeric |
+|fBodyGyro-std()-Z                     | numeric |
+|fBodyGyro-mad()-X                     | numeric |
+|fBodyGyro-mad()-Y                     | numeric |
+|fBodyGyro-mad()-Z                     | numeric |
+|fBodyGyro-max()-X                     | numeric |
+|fBodyGyro-max()-Y                     | numeric |
+|fBodyGyro-max()-Z                     | numeric |
+|fBodyGyro-min()-X                     | numeric |
+|fBodyGyro-min()-Y                     | numeric |
+|fBodyGyro-min()-Z                     | numeric |
+|fBodyGyro-sma()                       | numeric |
+|fBodyGyro-energy()-X                  | numeric |
+|fBodyGyro-energy()-Y                  | numeric |
+|fBodyGyro-energy()-Z                  | numeric |
+|fBodyGyro-iqr()-X                     | numeric |
+|fBodyGyro-iqr()-Y                     | numeric |
+|fBodyGyro-iqr()-Z                     | numeric |
+|fBodyGyro-entropy()-X                 | numeric |
+|fBodyGyro-entropy()-Y                 | numeric |
+|fBodyGyro-entropy()-Z                 | numeric |
+|fBodyGyro-maxInds-X                   | numeric |
+|fBodyGyro-maxInds-Y                   | numeric |
+|fBodyGyro-maxInds-Z                   | numeric |
+|fBodyGyro-meanFreq()-X                | numeric |
+|fBodyGyro-meanFreq()-Y                | numeric |
+|fBodyGyro-meanFreq()-Z                | numeric |
+|fBodyGyro-skewness()-X                | numeric |
+|fBodyGyro-kurtosis()-X                | numeric |
+|fBodyGyro-skewness()-Y                | numeric |
+|fBodyGyro-kurtosis()-Y                | numeric |
+|fBodyGyro-skewness()-Z                | numeric |
+|fBodyGyro-kurtosis()-Z                | numeric |
+|fBodyGyro-bandsEnergy()-1,8           | numeric |
+|fBodyGyro-bandsEnergy()-9,16          | numeric |
+|fBodyGyro-bandsEnergy()-17,24         | numeric |
+|fBodyGyro-bandsEnergy()-25,32         | numeric |
+|fBodyGyro-bandsEnergy()-33,40         | numeric |
+|fBodyGyro-bandsEnergy()-41,48         | numeric |
+|fBodyGyro-bandsEnergy()-49,56         | numeric |
+|fBodyGyro-bandsEnergy()-57,64         | numeric |
+|fBodyGyro-bandsEnergy()-1,16          | numeric |
+|fBodyGyro-bandsEnergy()-17,32         | numeric |
+|fBodyGyro-bandsEnergy()-33,48         | numeric |
+|fBodyGyro-bandsEnergy()-49,64         | numeric |
+|fBodyGyro-bandsEnergy()-1,24          | numeric |
+|fBodyGyro-bandsEnergy()-25,48         | numeric |
+|fBodyGyro-bandsEnergy()-1,8           | numeric |
+|fBodyGyro-bandsEnergy()-9,16          | numeric |
+|fBodyGyro-bandsEnergy()-17,24         | numeric |
+|fBodyGyro-bandsEnergy()-25,32         | numeric |
+|fBodyGyro-bandsEnergy()-33,40         | numeric |
+|fBodyGyro-bandsEnergy()-41,48         | numeric |
+|fBodyGyro-bandsEnergy()-49,56         | numeric |
+|fBodyGyro-bandsEnergy()-57,64         | numeric |
+|fBodyGyro-bandsEnergy()-1,16          | numeric |
+|fBodyGyro-bandsEnergy()-17,32         | numeric |
+|fBodyGyro-bandsEnergy()-33,48         | numeric |
+|fBodyGyro-bandsEnergy()-49,64         | numeric |
+|fBodyGyro-bandsEnergy()-1,24          | numeric |
+|fBodyGyro-bandsEnergy()-25,48         | numeric |
+|fBodyGyro-bandsEnergy()-1,8           | numeric |
+|fBodyGyro-bandsEnergy()-9,16          | numeric |
+|fBodyGyro-bandsEnergy()-17,24         | numeric |
+|fBodyGyro-bandsEnergy()-25,32         | numeric |
+|fBodyGyro-bandsEnergy()-33,40         | numeric |
+|fBodyGyro-bandsEnergy()-41,48         | numeric |
+|fBodyGyro-bandsEnergy()-49,56         | numeric |
+|fBodyGyro-bandsEnergy()-57,64         | numeric |
+|fBodyGyro-bandsEnergy()-1,16          | numeric |
+|fBodyGyro-bandsEnergy()-17,32         | numeric |
+|fBodyGyro-bandsEnergy()-33,48         | numeric |
+|fBodyGyro-bandsEnergy()-49,64         | numeric |
+|fBodyGyro-bandsEnergy()-1,24          | numeric |
+|fBodyGyro-bandsEnergy()-25,48         | numeric |
+|fBodyAccMag-mean()                    | numeric |
+|fBodyAccMag-std()                     | numeric |
+|fBodyAccMag-mad()                     | numeric |
+|fBodyAccMag-max()                     | numeric |
+|fBodyAccMag-min()                     | numeric |
+|fBodyAccMag-sma()                     | numeric |
+|fBodyAccMag-energy()                  | numeric |
+|fBodyAccMag-iqr()                     | numeric |
+|fBodyAccMag-entropy()                 | numeric |
+|fBodyAccMag-maxInds                   | numeric |
+|fBodyAccMag-meanFreq()                | numeric |
+|fBodyAccMag-skewness()                | numeric |
+|fBodyAccMag-kurtosis()                | numeric |
+|fBodyBodyAccJerkMag-mean()            | numeric |
+|fBodyBodyAccJerkMag-std()             | numeric |
+|fBodyBodyAccJerkMag-mad()             | numeric |
+|fBodyBodyAccJerkMag-max()             | numeric |
+|fBodyBodyAccJerkMag-min()             | numeric |
+|fBodyBodyAccJerkMag-sma()             | numeric |
+|fBodyBodyAccJerkMag-energy()          | numeric |
+|fBodyBodyAccJerkMag-iqr()             | numeric |
+|fBodyBodyAccJerkMag-entropy()         | numeric |
+|fBodyBodyAccJerkMag-maxInds           | numeric |
+|fBodyBodyAccJerkMag-meanFreq()        | numeric |
+|fBodyBodyAccJerkMag-skewness()        | numeric |
+|fBodyBodyAccJerkMag-kurtosis()        | numeric |
+|fBodyBodyGyroMag-mean()               | numeric |
+|fBodyBodyGyroMag-std()                | numeric |
+|fBodyBodyGyroMag-mad()                | numeric |
+|fBodyBodyGyroMag-max()                | numeric |
+|fBodyBodyGyroMag-min()                | numeric |
+|fBodyBodyGyroMag-sma()                | numeric |
+|fBodyBodyGyroMag-energy()             | numeric |
+|fBodyBodyGyroMag-iqr()                | numeric |
+|fBodyBodyGyroMag-entropy()            | numeric |
+|fBodyBodyGyroMag-maxInds              | numeric |
+|fBodyBodyGyroMag-meanFreq()           | numeric |
+|fBodyBodyGyroMag-skewness()           | numeric |
+|fBodyBodyGyroMag-kurtosis()           | numeric |
+|fBodyBodyGyroJerkMag-mean()           | numeric |
+|fBodyBodyGyroJerkMag-std()            | numeric |
+|fBodyBodyGyroJerkMag-mad()            | numeric |
+|fBodyBodyGyroJerkMag-max()            | numeric |
+|fBodyBodyGyroJerkMag-min()            | numeric |
+|fBodyBodyGyroJerkMag-sma()            | numeric |
+|fBodyBodyGyroJerkMag-energy()         | numeric |
+|fBodyBodyGyroJerkMag-iqr()            | numeric |
+|fBodyBodyGyroJerkMag-entropy()        | numeric |
+|fBodyBodyGyroJerkMag-maxInds          | numeric |
+|fBodyBodyGyroJerkMag-meanFreq()       | numeric |
+|fBodyBodyGyroJerkMag-skewness()       | numeric |
+|fBodyBodyGyroJerkMag-kurtosis()       | numeric |
+|angle(tBodyAccMean,gravity)           | numeric |
+|angle(tBodyAccJerkMean),gravityMean)  | numeric |
+|angle(tBodyGyroMean,gravityMean)      | numeric |
+|angle(tBodyGyroJerkMean,gravityMean)  | numeric |
+|angle(X,gravityMean)                  | numeric |
+|angle(Y,gravityMean)                  | numeric |
+|angle(Z,gravityMean)                  | numeric |
 
-Number of variables           561
----------------------------------
-
-##### Summary table
-
--------------------------------------------------------------------------------------------------
-Label   Variable                                     Class       # unique  Missing  Description  
-                                                                   values                        
-------- -------------------------------------------- --------- ---------- --------- -------------
-        **[tBodyAcc-mean()-X]**                      numeric         2947  0.00 %                
-
-        **[tBodyAcc-mean()-Y]**                      numeric         2947  0.00 %                
-
-        **[tBodyAcc-mean()-Z]**                      numeric         2947  0.00 %                
-
-        **[tBodyAcc-std()-X]**                       numeric         2947  0.00 %                
-
-        **[tBodyAcc-std()-Y]**                       numeric         2947  0.00 %                
-
-        **[tBodyAcc-std()-Z]**                       numeric         2947  0.00 %                
-
-        **[tBodyAcc-mad()-X]**                       numeric         2947  0.00 %                
-
-        **[tBodyAcc-mad()-Y]**                       numeric         2947  0.00 %                
-
-        **[tBodyAcc-mad()-Z]**                       numeric         2947  0.00 %                
-
-        **[tBodyAcc-max()-X]**                       numeric         2082  0.00 %                
-
-        **[tBodyAcc-max()-Y]**                       numeric         2108  0.00 %                
-
-        **[tBodyAcc-max()-Z]**                       numeric         2077  0.00 %                
-
-        **[tBodyAcc-min()-X]**                       numeric         2118  0.00 %                
-
-        **[tBodyAcc-min()-Y]**                       numeric         2117  0.00 %                
-
-        **[tBodyAcc-min()-Z]**                       numeric         2088  0.00 %                
-
-        **[tBodyAcc-sma()]**                         numeric         2947  0.00 %                
-
-        **[tBodyAcc-energy()-X]**                    numeric         2906  0.00 %                
-
-        **[tBodyAcc-energy()-Y]**                    numeric         2938  0.00 %                
-
-        **[tBodyAcc-energy()-Z]**                    numeric         2941  0.00 %                
-
-        **[tBodyAcc-iqr()-X]**                       numeric         2946  0.00 %                
-
-        **[tBodyAcc-iqr()-Y]**                       numeric         2947  0.00 %                
-
-        **[tBodyAcc-iqr()-Z]**                       numeric         2947  0.00 %                
-
-        **[tBodyAcc-entropy()-X]**                   numeric         1936  0.00 %                
-
-        **[tBodyAcc-entropy()-Y]**                   numeric         2693  0.00 %                
-
-        **[tBodyAcc-entropy()-Z]**                   numeric         2812  0.00 %                
-
-        **[tBodyAcc-arCoeff()-X,1]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-X,2]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-X,3]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-X,4]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-Y,1]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-Y,2]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-Y,3]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-Y,4]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-Z,1]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-Z,2]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-Z,3]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-arCoeff()-Z,4]**                 numeric         2947  0.00 %                
-
-        **[tBodyAcc-correlation()-X,Y]**             numeric         2947  0.00 %                
-
-        **[tBodyAcc-correlation()-X,Z]**             numeric         2947  0.00 %                
-
-        **[tBodyAcc-correlation()-Y,Z]**             numeric         2947  0.00 %                
-
-        **[tGravityAcc-mean()-X]**                   numeric         2947  0.00 %                
-
-        **[tGravityAcc-mean()-Y]**                   numeric         2947  0.00 %                
-
-        **[tGravityAcc-mean()-Z]**                   numeric         2947  0.00 %                
-
-        **[tGravityAcc-std()-X]**                    numeric         2945  0.00 %                
-
-        **[tGravityAcc-std()-Y]**                    numeric         2946  0.00 %                
-
-        **[tGravityAcc-std()-Z]**                    numeric         2946  0.00 %                
-
-        **[tGravityAcc-mad()-X]**                    numeric         2947  0.00 %                
-
-        **[tGravityAcc-mad()-Y]**                    numeric         2946  0.00 %                
-
-        **[tGravityAcc-mad()-Z]**                    numeric         2947  0.00 %                
-
-        **[tGravityAcc-max()-X]**                    numeric         2302  0.00 %                
-
-        **[tGravityAcc-max()-Y]**                    numeric         2322  0.00 %                
-
-        **[tGravityAcc-max()-Z]**                    numeric         2302  0.00 %                
-
-        **[tGravityAcc-min()-X]**                    numeric         2281  0.00 %                
-
-        **[tGravityAcc-min()-Y]**                    numeric         2286  0.00 %                
-
-        **[tGravityAcc-min()-Z]**                    numeric         2291  0.00 %                
-
-        **[tGravityAcc-sma()]**                      numeric         2947  0.00 %                
-
-        **[tGravityAcc-energy()-X]**                 numeric         2947  0.00 %                
-
-        **[tGravityAcc-energy()-Y]**                 numeric         2947  0.00 %                
-
-        **[tGravityAcc-energy()-Z]**                 numeric         2945  0.00 %                
-
-        **[tGravityAcc-iqr()-X]**                    numeric         2945  0.00 %                
-
-        **[tGravityAcc-iqr()-Y]**                    numeric         2947  0.00 %                
-
-        **[tGravityAcc-iqr()-Z]**                    numeric         2947  0.00 %                
-
-        **[tGravityAcc-entropy()-X]**                numeric         1312  0.00 %                
-
-        **[tGravityAcc-entropy()-Y]**                numeric          554  0.00 %                
-
-        **[tGravityAcc-entropy()-Z]**                numeric         1394  0.00 %                
-
-        **[tGravityAcc-arCoeff()-X,1]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-X,2]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-X,3]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-X,4]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-Y,1]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-Y,2]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-Y,3]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-Y,4]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-Z,1]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-Z,2]**              numeric         2946  0.00 %                
-
-        **[tGravityAcc-arCoeff()-Z,3]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-arCoeff()-Z,4]**              numeric         2947  0.00 %                
-
-        **[tGravityAcc-correlation()-X,Y]**          numeric         2947  0.00 %                
-
-        **[tGravityAcc-correlation()-X,Z]**          numeric         2947  0.00 %                
-
-        **[tGravityAcc-correlation()-Y,Z]**          numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-mean()-X]**                  numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-mean()-Y]**                  numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-mean()-Z]**                  numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-std()-X]**                   numeric         2945  0.00 %                
-
-        **[tBodyAccJerk-std()-Y]**                   numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-std()-Z]**                   numeric         2945  0.00 %                
-
-        **[tBodyAccJerk-mad()-X]**                   numeric         2945  0.00 %                
-
-        **[tBodyAccJerk-mad()-Y]**                   numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-mad()-Z]**                   numeric         2946  0.00 %                
-
-        **[tBodyAccJerk-max()-X]**                   numeric         2119  0.00 %                
-
-        **[tBodyAccJerk-max()-Y]**                   numeric         2112  0.00 %                
-
-        **[tBodyAccJerk-max()-Z]**                   numeric         2096  0.00 %                
-
-        **[tBodyAccJerk-min()-X]**                   numeric         2105  0.00 %                
-
-        **[tBodyAccJerk-min()-Y]**                   numeric         2137  0.00 %                
-
-        **[tBodyAccJerk-min()-Z]**                   numeric         2120  0.00 %                
-
-        **[tBodyAccJerk-sma()]**                     numeric         2946  0.00 %                
-
-        **[tBodyAccJerk-energy()-X]**                numeric         2927  0.00 %                
-
-        **[tBodyAccJerk-energy()-Y]**                numeric         2937  0.00 %                
-
-        **[tBodyAccJerk-energy()-Z]**                numeric         2926  0.00 %                
-
-        **[tBodyAccJerk-iqr()-X]**                   numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-iqr()-Y]**                   numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-iqr()-Z]**                   numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-entropy()-X]**               numeric         2017  0.00 %                
-
-        **[tBodyAccJerk-entropy()-Y]**               numeric         2106  0.00 %                
-
-        **[tBodyAccJerk-entropy()-Z]**               numeric         2255  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-X,1]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-X,2]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-X,3]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-X,4]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-Y,1]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-Y,2]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-Y,3]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-Y,4]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-Z,1]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-Z,2]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-Z,3]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-arCoeff()-Z,4]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-correlation()-X,Y]**         numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-correlation()-X,Z]**         numeric         2947  0.00 %                
-
-        **[tBodyAccJerk-correlation()-Y,Z]**         numeric         2947  0.00 %                
-
-        **[tBodyGyro-mean()-X]**                     numeric         2946  0.00 %                
-
-        **[tBodyGyro-mean()-Y]**                     numeric         2947  0.00 %                
-
-        **[tBodyGyro-mean()-Z]**                     numeric         2947  0.00 %                
-
-        **[tBodyGyro-std()-X]**                      numeric         2947  0.00 %                
-
-        **[tBodyGyro-std()-Y]**                      numeric         2947  0.00 %                
-
-        **[tBodyGyro-std()-Z]**                      numeric         2946  0.00 %                
-
-        **[tBodyGyro-mad()-X]**                      numeric         2947  0.00 %                
-
-        **[tBodyGyro-mad()-Y]**                      numeric         2947  0.00 %                
-
-        **[tBodyGyro-mad()-Z]**                      numeric         2947  0.00 %                
-
-        **[tBodyGyro-max()-X]**                      numeric         2187  0.00 %                
-
-        **[tBodyGyro-max()-Y]**                      numeric         2142  0.00 %                
-
-        **[tBodyGyro-max()-Z]**                      numeric         2173  0.00 %                
-
-        **[tBodyGyro-min()-X]**                      numeric         2178  0.00 %                
-
-        **[tBodyGyro-min()-Y]**                      numeric         2126  0.00 %                
-
-        **[tBodyGyro-min()-Z]**                      numeric         2166  0.00 %                
-
-        **[tBodyGyro-sma()]**                        numeric         2945  0.00 %                
-
-        **[tBodyGyro-energy()-X]**                   numeric         2929  0.00 %                
-
-        **[tBodyGyro-energy()-Y]**                   numeric         2932  0.00 %                
-
-        **[tBodyGyro-energy()-Z]**                   numeric         2934  0.00 %                
-
-        **[tBodyGyro-iqr()-X]**                      numeric         2947  0.00 %                
-
-        **[tBodyGyro-iqr()-Y]**                      numeric         2947  0.00 %                
-
-        **[tBodyGyro-iqr()-Z]**                      numeric         2947  0.00 %                
-
-        **[tBodyGyro-entropy()-X]**                  numeric         2568  0.00 %                
-
-        **[tBodyGyro-entropy()-Y]**                  numeric         2526  0.00 %                
-
-        **[tBodyGyro-entropy()-Z]**                  numeric         2538  0.00 %                
-
-        **[tBodyGyro-arCoeff()-X,1]**                numeric         2946  0.00 %                
-
-        **[tBodyGyro-arCoeff()-X,2]**                numeric         2946  0.00 %                
-
-        **[tBodyGyro-arCoeff()-X,3]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-arCoeff()-X,4]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-arCoeff()-Y,1]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-arCoeff()-Y,2]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-arCoeff()-Y,3]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-arCoeff()-Y,4]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-arCoeff()-Z,1]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-arCoeff()-Z,2]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-arCoeff()-Z,3]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-arCoeff()-Z,4]**                numeric         2947  0.00 %                
-
-        **[tBodyGyro-correlation()-X,Y]**            numeric         2947  0.00 %                
-
-        **[tBodyGyro-correlation()-X,Z]**            numeric         2947  0.00 %                
-
-        **[tBodyGyro-correlation()-Y,Z]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-mean()-X]**                 numeric         2946  0.00 %                
-
-        **[tBodyGyroJerk-mean()-Y]**                 numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-mean()-Z]**                 numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-std()-X]**                  numeric         2946  0.00 %                
-
-        **[tBodyGyroJerk-std()-Y]**                  numeric         2946  0.00 %                
-
-        **[tBodyGyroJerk-std()-Z]**                  numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-mad()-X]**                  numeric         2946  0.00 %                
-
-        **[tBodyGyroJerk-mad()-Y]**                  numeric         2946  0.00 %                
-
-        **[tBodyGyroJerk-mad()-Z]**                  numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-max()-X]**                  numeric         2128  0.00 %                
-
-        **[tBodyGyroJerk-max()-Y]**                  numeric         2134  0.00 %                
-
-        **[tBodyGyroJerk-max()-Z]**                  numeric         2122  0.00 %                
-
-        **[tBodyGyroJerk-min()-X]**                  numeric         2139  0.00 %                
-
-        **[tBodyGyroJerk-min()-Y]**                  numeric         2117  0.00 %                
-
-        **[tBodyGyroJerk-min()-Z]**                  numeric         2135  0.00 %                
-
-        **[tBodyGyroJerk-sma()]**                    numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-energy()-X]**               numeric         2917  0.00 %                
-
-        **[tBodyGyroJerk-energy()-Y]**               numeric         2902  0.00 %                
-
-        **[tBodyGyroJerk-energy()-Z]**               numeric         2904  0.00 %                
-
-        **[tBodyGyroJerk-iqr()-X]**                  numeric         2946  0.00 %                
-
-        **[tBodyGyroJerk-iqr()-Y]**                  numeric         2945  0.00 %                
-
-        **[tBodyGyroJerk-iqr()-Z]**                  numeric         2945  0.00 %                
-
-        **[tBodyGyroJerk-entropy()-X]**              numeric         2366  0.00 %                
-
-        **[tBodyGyroJerk-entropy()-Y]**              numeric         2543  0.00 %                
-
-        **[tBodyGyroJerk-entropy()-Z]**              numeric         2365  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-X,1]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-X,2]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-X,3]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-X,4]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-Y,1]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-Y,2]**            numeric         2946  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-Y,3]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-Y,4]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-Z,1]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-Z,2]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-Z,3]**            numeric         2946  0.00 %                
-
-        **[tBodyGyroJerk-arCoeff()-Z,4]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-correlation()-X,Y]**        numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-correlation()-X,Z]**        numeric         2947  0.00 %                
-
-        **[tBodyGyroJerk-correlation()-Y,Z]**        numeric         2947  0.00 %                
-
-        **[tBodyAccMag-mean()]**                     numeric         2947  0.00 %                
-
-        **[tBodyAccMag-std()]**                      numeric         2946  0.00 %                
-
-        **[tBodyAccMag-mad()]**                      numeric         2947  0.00 %                
-
-        **[tBodyAccMag-max()]**                      numeric         2147  0.00 %                
-
-        **[tBodyAccMag-min()]**                      numeric         2082  0.00 %                
-
-        **[tBodyAccMag-sma()]**                      numeric         2947  0.00 %                
-
-        **[tBodyAccMag-energy()]**                   numeric         2938  0.00 %                
-
-        **[tBodyAccMag-iqr()]**                      numeric         2947  0.00 %                
-
-        **[tBodyAccMag-entropy()]**                  numeric         2391  0.00 %                
-
-        **[tBodyAccMag-arCoeff()1]**                 numeric         2947  0.00 %                
-
-        **[tBodyAccMag-arCoeff()2]**                 numeric         2947  0.00 %                
-
-        **[tBodyAccMag-arCoeff()3]**                 numeric         2947  0.00 %                
-
-        **[tBodyAccMag-arCoeff()4]**                 numeric         2947  0.00 %                
-
-        **[tGravityAccMag-mean()]**                  numeric         2947  0.00 %                
-
-        **[tGravityAccMag-std()]**                   numeric         2946  0.00 %                
-
-        **[tGravityAccMag-mad()]**                   numeric         2947  0.00 %                
-
-        **[tGravityAccMag-max()]**                   numeric         2147  0.00 %                
-
-        **[tGravityAccMag-min()]**                   numeric         2082  0.00 %                
-
-        **[tGravityAccMag-sma()]**                   numeric         2947  0.00 %                
-
-        **[tGravityAccMag-energy()]**                numeric         2938  0.00 %                
-
-        **[tGravityAccMag-iqr()]**                   numeric         2947  0.00 %                
-
-        **[tGravityAccMag-entropy()]**               numeric         2391  0.00 %                
-
-        **[tGravityAccMag-arCoeff()1]**              numeric         2947  0.00 %                
-
-        **[tGravityAccMag-arCoeff()2]**              numeric         2947  0.00 %                
-
-        **[tGravityAccMag-arCoeff()3]**              numeric         2947  0.00 %                
-
-        **[tGravityAccMag-arCoeff()4]**              numeric         2947  0.00 %                
-
-        **[tBodyAccJerkMag-mean()]**                 numeric         2947  0.00 %                
-
-        **[tBodyAccJerkMag-std()]**                  numeric         2947  0.00 %                
-
-        **[tBodyAccJerkMag-mad()]**                  numeric         2946  0.00 %                
-
-        **[tBodyAccJerkMag-max()]**                  numeric         2110  0.00 %                
-
-        **[tBodyAccJerkMag-min()]**                  numeric         2087  0.00 %                
-
-        **[tBodyAccJerkMag-sma()]**                  numeric         2947  0.00 %                
-
-        **[tBodyAccJerkMag-energy()]**               numeric         2930  0.00 %                
-
-        **[tBodyAccJerkMag-iqr()]**                  numeric         2947  0.00 %                
-
-        **[tBodyAccJerkMag-entropy()]**              numeric         2625  0.00 %                
-
-        **[tBodyAccJerkMag-arCoeff()1]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerkMag-arCoeff()2]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerkMag-arCoeff()3]**             numeric         2947  0.00 %                
-
-        **[tBodyAccJerkMag-arCoeff()4]**             numeric         2947  0.00 %                
-
-        **[tBodyGyroMag-mean()]**                    numeric         2946  0.00 %                
-
-        **[tBodyGyroMag-std()]**                     numeric         2947  0.00 %                
-
-        **[tBodyGyroMag-mad()]**                     numeric         2944  0.00 %                
-
-        **[tBodyGyroMag-max()]**                     numeric         2208  0.00 %                
-
-        **[tBodyGyroMag-min()]**                     numeric         2119  0.00 %                
-
-        **[tBodyGyroMag-sma()]**                     numeric         2946  0.00 %                
-
-        **[tBodyGyroMag-energy()]**                  numeric         2940  0.00 %                
-
-        **[tBodyGyroMag-iqr()]**                     numeric         2946  0.00 %                
-
-        **[tBodyGyroMag-entropy()]**                 numeric         2654  0.00 %                
-
-        **[tBodyGyroMag-arCoeff()1]**                numeric         2947  0.00 %                
-
-        **[tBodyGyroMag-arCoeff()2]**                numeric         2947  0.00 %                
-
-        **[tBodyGyroMag-arCoeff()3]**                numeric         2947  0.00 %                
-
-        **[tBodyGyroMag-arCoeff()4]**                numeric         2947  0.00 %                
-
-        **[tBodyGyroJerkMag-mean()]**                numeric         2947  0.00 %                
-
-        **[tBodyGyroJerkMag-std()]**                 numeric         2947  0.00 %                
-
-        **[tBodyGyroJerkMag-mad()]**                 numeric         2946  0.00 %                
-
-        **[tBodyGyroJerkMag-max()]**                 numeric         2138  0.00 %                
-
-        **[tBodyGyroJerkMag-min()]**                 numeric         2075  0.00 %                
-
-        **[tBodyGyroJerkMag-sma()]**                 numeric         2947  0.00 %                
-
-        **[tBodyGyroJerkMag-energy()]**              numeric         2913  0.00 %                
-
-        **[tBodyGyroJerkMag-iqr()]**                 numeric         2946  0.00 %                
-
-        **[tBodyGyroJerkMag-entropy()]**             numeric         2471  0.00 %                
-
-        **[tBodyGyroJerkMag-arCoeff()1]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerkMag-arCoeff()2]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerkMag-arCoeff()3]**            numeric         2947  0.00 %                
-
-        **[tBodyGyroJerkMag-arCoeff()4]**            numeric         2947  0.00 %                
-
-        **[fBodyAcc-mean()-X]**                      numeric         2946  0.00 %                
-
-        **[fBodyAcc-mean()-Y]**                      numeric         2946  0.00 %                
-
-        **[fBodyAcc-mean()-Z]**                      numeric         2945  0.00 %                
-
-        **[fBodyAcc-std()-X]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-std()-Y]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-std()-Z]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-mad()-X]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-mad()-Y]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-mad()-Z]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-max()-X]**                       numeric         2946  0.00 %                
-
-        **[fBodyAcc-max()-Y]**                       numeric         2946  0.00 %                
-
-        **[fBodyAcc-max()-Z]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-min()-X]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-min()-Y]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-min()-Z]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-sma()]**                         numeric         2947  0.00 %                
-
-        **[fBodyAcc-energy()-X]**                    numeric         2902  0.00 %                
-
-        **[fBodyAcc-energy()-Y]**                    numeric         2941  0.00 %                
-
-        **[fBodyAcc-energy()-Z]**                    numeric         2939  0.00 %                
-
-        **[fBodyAcc-iqr()-X]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-iqr()-Y]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-iqr()-Z]**                       numeric         2947  0.00 %                
-
-        **[fBodyAcc-entropy()-X]**                   numeric         1597  0.00 %                
-
-        **[fBodyAcc-entropy()-Y]**                   numeric         1718  0.00 %                
-
-        **[fBodyAcc-entropy()-Z]**                   numeric         1663  0.00 %                
-
-        **[fBodyAcc-maxInds-X]**                     numeric           27  0.00 %                
-
-        **[fBodyAcc-maxInds-Y]**                     numeric           22  0.00 %                
-
-        **[fBodyAcc-maxInds-Z]**                     numeric           23  0.00 %                
-
-        **[fBodyAcc-meanFreq()-X]**                  numeric         2947  0.00 %                
-
-        **[fBodyAcc-meanFreq()-Y]**                  numeric         2947  0.00 %                
-
-        **[fBodyAcc-meanFreq()-Z]**                  numeric         2947  0.00 %                
-
-        **[fBodyAcc-skewness()-X]**                  numeric         2947  0.00 %                
-
-        **[fBodyAcc-kurtosis()-X]**                  numeric         2946  0.00 %                
-
-        **[fBodyAcc-skewness()-Y]**                  numeric         2947  0.00 %                
-
-        **[fBodyAcc-kurtosis()-Y]**                  numeric         2947  0.00 %                
-
-        **[fBodyAcc-skewness()-Z]**                  numeric         2947  0.00 %                
-
-        **[fBodyAcc-kurtosis()-Z]**                  numeric         2946  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-1,8]**             numeric         2940  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-9,16]**            numeric         2937  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-17,24]**           numeric         2937  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-25,32]**           numeric         2923  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-33,40]**           numeric         2934  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-41,48]**           numeric         2936  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-49,56]**           numeric         2940  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-57,64]**           numeric         2914  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-1,16]**            numeric         2942  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-17,32]**           numeric         2929  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-33,48]**           numeric         2931  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-49,64]**           numeric         2940  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-1,24]**            numeric         2943  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-25,48]**           numeric         2927  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-1,8]**             numeric         2940  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-9,16]**            numeric         2937  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-17,24]**           numeric         2937  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-25,32]**           numeric         2923  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-33,40]**           numeric         2934  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-41,48]**           numeric         2936  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-49,56]**           numeric         2940  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-57,64]**           numeric         2914  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-1,16]**            numeric         2942  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-17,32]**           numeric         2929  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-33,48]**           numeric         2931  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-49,64]**           numeric         2940  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-1,24]**            numeric         2943  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-25,48]**           numeric         2927  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-1,8]**             numeric         2940  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-9,16]**            numeric         2937  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-17,24]**           numeric         2937  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-25,32]**           numeric         2923  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-33,40]**           numeric         2934  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-41,48]**           numeric         2936  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-49,56]**           numeric         2940  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-57,64]**           numeric         2914  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-1,16]**            numeric         2942  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-17,32]**           numeric         2929  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-33,48]**           numeric         2931  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-49,64]**           numeric         2940  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-1,24]**            numeric         2943  0.00 %                
-
-        **[fBodyAcc-bandsEnergy()-25,48]**           numeric         2927  0.00 %                
-
-        **[fBodyAccJerk-mean()-X]**                  numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-mean()-Y]**                  numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-mean()-Z]**                  numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-std()-X]**                   numeric         2944  0.00 %                
-
-        **[fBodyAccJerk-std()-Y]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-std()-Z]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-mad()-X]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-mad()-Y]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-mad()-Z]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-max()-X]**                   numeric         2945  0.00 %                
-
-        **[fBodyAccJerk-max()-Y]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-max()-Z]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-min()-X]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-min()-Y]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-min()-Z]**                   numeric         2946  0.00 %                
-
-        **[fBodyAccJerk-sma()]**                     numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-energy()-X]**                numeric         2920  0.00 %                
-
-        **[fBodyAccJerk-energy()-Y]**                numeric         2930  0.00 %                
-
-        **[fBodyAccJerk-energy()-Z]**                numeric         2932  0.00 %                
-
-        **[fBodyAccJerk-iqr()-X]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-iqr()-Y]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-iqr()-Z]**                   numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-entropy()-X]**               numeric         1455  0.00 %                
-
-        **[fBodyAccJerk-entropy()-Y]**               numeric         1478  0.00 %                
-
-        **[fBodyAccJerk-entropy()-Z]**               numeric         1446  0.00 %                
-
-        **[fBodyAccJerk-maxInds-X]**                 numeric           41  0.00 %                
-
-        **[fBodyAccJerk-maxInds-Y]**                 numeric           42  0.00 %                
-
-        **[fBodyAccJerk-maxInds-Z]**                 numeric           45  0.00 %                
-
-        **[fBodyAccJerk-meanFreq()-X]**              numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-meanFreq()-Y]**              numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-meanFreq()-Z]**              numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-skewness()-X]**              numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-kurtosis()-X]**              numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-skewness()-Y]**              numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-kurtosis()-Y]**              numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-skewness()-Z]**              numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-kurtosis()-Z]**              numeric         2947  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-1,8]**         numeric         2933  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-9,16]**        numeric         2927  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-17,24]**       numeric         2928  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-25,32]**       numeric         2923  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-33,40]**       numeric         2932  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-41,48]**       numeric         2938  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-49,56]**       numeric         2941  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-57,64]**       numeric         2909  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-1,16]**        numeric         2936  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-17,32]**       numeric         2923  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-33,48]**       numeric         2934  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-49,64]**       numeric         2938  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-1,24]**        numeric         2931  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-25,48]**       numeric         2926  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-1,8]**         numeric         2933  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-9,16]**        numeric         2927  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-17,24]**       numeric         2928  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-25,32]**       numeric         2923  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-33,40]**       numeric         2932  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-41,48]**       numeric         2938  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-49,56]**       numeric         2941  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-57,64]**       numeric         2909  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-1,16]**        numeric         2936  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-17,32]**       numeric         2923  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-33,48]**       numeric         2934  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-49,64]**       numeric         2938  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-1,24]**        numeric         2931  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-25,48]**       numeric         2926  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-1,8]**         numeric         2933  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-9,16]**        numeric         2927  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-17,24]**       numeric         2928  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-25,32]**       numeric         2923  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-33,40]**       numeric         2932  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-41,48]**       numeric         2938  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-49,56]**       numeric         2941  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-57,64]**       numeric         2909  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-1,16]**        numeric         2936  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-17,32]**       numeric         2923  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-33,48]**       numeric         2934  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-49,64]**       numeric         2938  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-1,24]**        numeric         2931  0.00 %                
-
-        **[fBodyAccJerk-bandsEnergy()-25,48]**       numeric         2926  0.00 %                
-
-        **[fBodyGyro-mean()-X]**                     numeric         2947  0.00 %                
-
-        **[fBodyGyro-mean()-Y]**                     numeric         2947  0.00 %                
-
-        **[fBodyGyro-mean()-Z]**                     numeric         2947  0.00 %                
-
-        **[fBodyGyro-std()-X]**                      numeric         2946  0.00 %                
-
-        **[fBodyGyro-std()-Y]**                      numeric         2946  0.00 %                
-
-        **[fBodyGyro-std()-Z]**                      numeric         2946  0.00 %                
-
-        **[fBodyGyro-mad()-X]**                      numeric         2946  0.00 %                
-
-        **[fBodyGyro-mad()-Y]**                      numeric         2947  0.00 %                
-
-        **[fBodyGyro-mad()-Z]**                      numeric         2946  0.00 %                
-
-        **[fBodyGyro-max()-X]**                      numeric         2947  0.00 %                
-
-        **[fBodyGyro-max()-Y]**                      numeric         2947  0.00 %                
-
-        **[fBodyGyro-max()-Z]**                      numeric         2947  0.00 %                
-
-        **[fBodyGyro-min()-X]**                      numeric         2946  0.00 %                
-
-        **[fBodyGyro-min()-Y]**                      numeric         2946  0.00 %                
-
-        **[fBodyGyro-min()-Z]**                      numeric         2947  0.00 %                
-
-        **[fBodyGyro-sma()]**                        numeric         2947  0.00 %                
-
-        **[fBodyGyro-energy()-X]**                   numeric         2920  0.00 %                
-
-        **[fBodyGyro-energy()-Y]**                   numeric         2935  0.00 %                
-
-        **[fBodyGyro-energy()-Z]**                   numeric         2937  0.00 %                
-
-        **[fBodyGyro-iqr()-X]**                      numeric         2947  0.00 %                
-
-        **[fBodyGyro-iqr()-Y]**                      numeric         2947  0.00 %                
-
-        **[fBodyGyro-iqr()-Z]**                      numeric         2947  0.00 %                
-
-        **[fBodyGyro-entropy()-X]**                  numeric         2115  0.00 %                
-
-        **[fBodyGyro-entropy()-Y]**                  numeric         2166  0.00 %                
-
-        **[fBodyGyro-entropy()-Z]**                  numeric         1990  0.00 %                
-
-        **[fBodyGyro-maxInds-X]**                    numeric           21  0.00 %                
-
-        **[fBodyGyro-maxInds-Y]**                    numeric           28  0.00 %                
-
-        **[fBodyGyro-maxInds-Z]**                    numeric           22  0.00 %                
-
-        **[fBodyGyro-meanFreq()-X]**                 numeric         2947  0.00 %                
-
-        **[fBodyGyro-meanFreq()-Y]**                 numeric         2947  0.00 %                
-
-        **[fBodyGyro-meanFreq()-Z]**                 numeric         2947  0.00 %                
-
-        **[fBodyGyro-skewness()-X]**                 numeric         2947  0.00 %                
-
-        **[fBodyGyro-kurtosis()-X]**                 numeric         2947  0.00 %                
-
-        **[fBodyGyro-skewness()-Y]**                 numeric         2947  0.00 %                
-
-        **[fBodyGyro-kurtosis()-Y]**                 numeric         2947  0.00 %                
-
-        **[fBodyGyro-skewness()-Z]**                 numeric         2947  0.00 %                
-
-        **[fBodyGyro-kurtosis()-Z]**                 numeric         2947  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-1,8]**            numeric         2932  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-9,16]**           numeric         2910  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-17,24]**          numeric         2897  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-25,32]**          numeric         2897  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-33,40]**          numeric         2902  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-41,48]**          numeric         2924  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-49,56]**          numeric         2926  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-57,64]**          numeric         2837  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-1,16]**           numeric         2935  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-17,32]**          numeric         2918  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-33,48]**          numeric         2903  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-49,64]**          numeric         2919  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-1,24]**           numeric         2931  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-25,48]**          numeric         2897  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-1,8]**            numeric         2932  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-9,16]**           numeric         2910  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-17,24]**          numeric         2897  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-25,32]**          numeric         2897  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-33,40]**          numeric         2902  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-41,48]**          numeric         2924  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-49,56]**          numeric         2926  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-57,64]**          numeric         2837  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-1,16]**           numeric         2935  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-17,32]**          numeric         2918  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-33,48]**          numeric         2903  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-49,64]**          numeric         2919  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-1,24]**           numeric         2931  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-25,48]**          numeric         2897  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-1,8]**            numeric         2932  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-9,16]**           numeric         2910  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-17,24]**          numeric         2897  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-25,32]**          numeric         2897  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-33,40]**          numeric         2902  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-41,48]**          numeric         2924  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-49,56]**          numeric         2926  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-57,64]**          numeric         2837  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-1,16]**           numeric         2935  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-17,32]**          numeric         2918  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-33,48]**          numeric         2903  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-49,64]**          numeric         2919  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-1,24]**           numeric         2931  0.00 %                
-
-        **[fBodyGyro-bandsEnergy()-25,48]**          numeric         2897  0.00 %                
-
-        **[fBodyAccMag-mean()]**                     numeric         2947  0.00 %                
-
-        **[fBodyAccMag-std()]**                      numeric         2947  0.00 %                
-
-        **[fBodyAccMag-mad()]**                      numeric         2947  0.00 %                
-
-        **[fBodyAccMag-max()]**                      numeric         2947  0.00 %                
-
-        **[fBodyAccMag-min()]**                      numeric         2947  0.00 %                
-
-        **[fBodyAccMag-sma()]**                      numeric         2947  0.00 %                
-
-        **[fBodyAccMag-energy()]**                   numeric         2939  0.00 %                
-
-        **[fBodyAccMag-iqr()]**                      numeric         2947  0.00 %                
-
-        **[fBodyAccMag-entropy()]**                  numeric         1684  0.00 %                
-
-        **[fBodyAccMag-maxInds]**                    numeric           21  0.00 %                
-
-        **[fBodyAccMag-meanFreq()]**                 numeric         2947  0.00 %                
-
-        **[fBodyAccMag-skewness()]**                 numeric         2947  0.00 %                
-
-        **[fBodyAccMag-kurtosis()]**                 numeric         2947  0.00 %                
-
-        **[fBodyBodyAccJerkMag-mean()]**             numeric         2947  0.00 %                
-
-        **[fBodyBodyAccJerkMag-std()]**              numeric         2946  0.00 %                
-
-        **[fBodyBodyAccJerkMag-mad()]**              numeric         2947  0.00 %                
-
-        **[fBodyBodyAccJerkMag-max()]**              numeric         2947  0.00 %                
-
-        **[fBodyBodyAccJerkMag-min()]**              numeric         2946  0.00 %                
-
-        **[fBodyBodyAccJerkMag-sma()]**              numeric         2947  0.00 %                
-
-        **[fBodyBodyAccJerkMag-energy()]**           numeric         2921  0.00 %                
-
-        **[fBodyBodyAccJerkMag-iqr()]**              numeric         2947  0.00 %                
-
-        **[fBodyBodyAccJerkMag-entropy()]**          numeric         1499  0.00 %                
-
-        **[fBodyBodyAccJerkMag-maxInds]**            numeric           50  0.00 %                
-
-        **[fBodyBodyAccJerkMag-meanFreq()]**         numeric         2947  0.00 %                
-
-        **[fBodyBodyAccJerkMag-skewness()]**         numeric         2947  0.00 %                
-
-        **[fBodyBodyAccJerkMag-kurtosis()]**         numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroMag-mean()]**                numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroMag-std()]**                 numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroMag-mad()]**                 numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroMag-max()]**                 numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroMag-min()]**                 numeric         2946  0.00 %                
-
-        **[fBodyBodyGyroMag-sma()]**                 numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroMag-energy()]**              numeric         2937  0.00 %                
-
-        **[fBodyBodyGyroMag-iqr()]**                 numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroMag-entropy()]**             numeric         2163  0.00 %                
-
-        **[fBodyBodyGyroMag-maxInds]**               numeric           21  0.00 %                
-
-        **[fBodyBodyGyroMag-meanFreq()]**            numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroMag-skewness()]**            numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroMag-kurtosis()]**            numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-mean()]**            numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-std()]**             numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-mad()]**             numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-max()]**             numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-min()]**             numeric         2946  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-sma()]**             numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-energy()]**          numeric         2899  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-iqr()]**             numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-entropy()]**         numeric         1721  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-maxInds]**           numeric           40  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-meanFreq()]**        numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-skewness()]**        numeric         2947  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-kurtosis()]**        numeric         2947  0.00 %                
-
-        **[angle(tBodyAccMean,gravity)]**            numeric         2947  0.00 %                
-
-        **[angle(tBodyAccJerkMean),gravityMean)]**   numeric         2947  0.00 %                
-
-        **[angle(tBodyGyroMean,gravityMean)]**       numeric         2947  0.00 %                
-
-        **[angle(tBodyGyroJerkMean,gravityMean)]**   numeric         2947  0.00 %                
-
-        **[angle(X,gravityMean)]**                   numeric         2947  0.00 %                
-
-        **[angle(Y,gravityMean)]**                   numeric         2947  0.00 %                
-
-        **[angle(Z,gravityMean)]**                   numeric         2947  0.00 %                
--------------------------------------------------------------------------------------------------
 
 ### Interim Files
 
@@ -1260,225 +684,130 @@ Result from binding columns of the testHAR and trainHAR datasets *(only the std(
 
 ##### Dimensions:
 
----------------------------------
-Feature                    Result
------------------------- --------
-Number of observations      10299 *(7352 for trainHAR, 2947 for testHAR)*
-
-Number of variables            81
----------------------------------
-
-##### Summary table
-
---------------------------------------------------------------------------------------------
-Label   Variable                                Class       # unique  Missing  Description  
-                                                              values                        
-------- --------------------------------------- --------- ---------- --------- -------------
-        **[subjectID]**                         integer           30  0.00 %                
-
-        **[activityCode]**                      integer            6  0.00 %                
-
-        **[tBodyAcc-mean()-X]**                 numeric        10292  0.00 %                
-
-        **[tBodyAcc-mean()-Y]**                 numeric        10299  0.00 %                
-
-        **[tBodyAcc-mean()-Z]**                 numeric        10293  0.00 %                
-
-        **[tBodyAcc-std()-X]**                  numeric        10295  0.00 %                
-
-        **[tBodyAcc-std()-Y]**                  numeric        10297  0.00 %                
-
-        **[tBodyAcc-std()-Z]**                  numeric        10297  0.00 %                
-
-        **[tGravityAcc-mean()-X]**              numeric        10296  0.00 %                
-
-        **[tGravityAcc-mean()-Y]**              numeric        10298  0.00 %                
-
-        **[tGravityAcc-mean()-Z]**              numeric        10299  0.00 %                
-
-        **[tGravityAcc-std()-X]**               numeric        10288  0.00 %                
-
-        **[tGravityAcc-std()-Y]**               numeric        10293  0.00 %                
-
-        **[tGravityAcc-std()-Z]**               numeric        10296  0.00 %                
-
-        **[tBodyAccJerk-mean()-X]**             numeric        10299  0.00 %                
-
-        **[tBodyAccJerk-mean()-Y]**             numeric        10299  0.00 %                
-
-        **[tBodyAccJerk-mean()-Z]**             numeric        10299  0.00 %                
-
-        **[tBodyAccJerk-std()-X]**              numeric        10290  0.00 %                
-
-        **[tBodyAccJerk-std()-Y]**              numeric        10296  0.00 %                
-
-        **[tBodyAccJerk-std()-Z]**              numeric        10293  0.00 %                
-
-        **[tBodyGyro-mean()-X]**                numeric        10298  0.00 %                
-
-        **[tBodyGyro-mean()-Y]**                numeric        10299  0.00 %                
-
-        **[tBodyGyro-mean()-Z]**                numeric        10297  0.00 %                
-
-        **[tBodyGyro-std()-X]**                 numeric        10292  0.00 %                
-
-        **[tBodyGyro-std()-Y]**                 numeric        10296  0.00 %                
-
-        **[tBodyGyro-std()-Z]**                 numeric        10296  0.00 %                
-
-        **[tBodyGyroJerk-mean()-X]**            numeric        10295  0.00 %                
-
-        **[tBodyGyroJerk-mean()-Y]**            numeric        10299  0.00 %                
-
-        **[tBodyGyroJerk-mean()-Z]**            numeric        10298  0.00 %                
-
-        **[tBodyGyroJerk-std()-X]**             numeric        10292  0.00 %                
-
-        **[tBodyGyroJerk-std()-Y]**             numeric        10295  0.00 %                
-
-        **[tBodyGyroJerk-std()-Z]**             numeric        10291  0.00 %                
-
-        **[tBodyAccMag-mean()]**                numeric        10296  0.00 %                
-
-        **[tBodyAccMag-std()]**                 numeric        10294  0.00 %                
-
-        **[tGravityAccMag-mean()]**             numeric        10296  0.00 %                
-
-        **[tGravityAccMag-std()]**              numeric        10294  0.00 %                
-
-        **[tBodyAccJerkMag-mean()]**            numeric        10292  0.00 %                
-
-        **[tBodyAccJerkMag-std()]**             numeric        10294  0.00 %                
-
-        **[tBodyGyroMag-mean()]**               numeric        10298  0.00 %                
-
-        **[tBodyGyroMag-std()]**                numeric        10298  0.00 %                
-
-        **[tBodyGyroJerkMag-mean()]**           numeric        10293  0.00 %                
-
-        **[tBodyGyroJerkMag-std()]**            numeric        10297  0.00 %                
-
-        **[fBodyAcc-mean()-X]**                 numeric        10295  0.00 %                
-
-        **[fBodyAcc-mean()-Y]**                 numeric        10292  0.00 %                
-
-        **[fBodyAcc-mean()-Z]**                 numeric        10295  0.00 %                
-
-        **[fBodyAcc-std()-X]**                  numeric        10294  0.00 %                
-
-        **[fBodyAcc-std()-Y]**                  numeric        10297  0.00 %                
-
-        **[fBodyAcc-std()-Z]**                  numeric        10296  0.00 %                
-
-        **[fBodyAcc-meanFreq()-X]**             numeric        10299  0.00 %                
-
-        **[fBodyAcc-meanFreq()-Y]**             numeric        10299  0.00 %                
-
-        **[fBodyAcc-meanFreq()-Z]**             numeric        10299  0.00 %                
-
-        **[fBodyAccJerk-mean()-X]**             numeric        10293  0.00 %                
-
-        **[fBodyAccJerk-mean()-Y]**             numeric        10296  0.00 %                
-
-        **[fBodyAccJerk-mean()-Z]**             numeric        10294  0.00 %                
-
-        **[fBodyAccJerk-std()-X]**              numeric        10291  0.00 %                
-
-        **[fBodyAccJerk-std()-Y]**              numeric        10294  0.00 %                
-
-        **[fBodyAccJerk-std()-Z]**              numeric        10290  0.00 %                
-
-        **[fBodyAccJerk-meanFreq()-X]**         numeric        10298  0.00 %                
-
-        **[fBodyAccJerk-meanFreq()-Y]**         numeric        10299  0.00 %                
-
-        **[fBodyAccJerk-meanFreq()-Z]**         numeric        10298  0.00 %                
-
-        **[fBodyGyro-mean()-X]**                numeric        10297  0.00 %                
-
-        **[fBodyGyro-mean()-Y]**                numeric        10296  0.00 %                
-
-        **[fBodyGyro-mean()-Z]**                numeric        10297  0.00 %                
-
-        **[fBodyGyro-std()-X]**                 numeric        10297  0.00 %                
-
-        **[fBodyGyro-std()-Y]**                 numeric        10293  0.00 %                
-
-        **[fBodyGyro-std()-Z]**                 numeric        10295  0.00 %                
-
-        **[fBodyGyro-meanFreq()-X]**            numeric        10298  0.00 %                
-
-        **[fBodyGyro-meanFreq()-Y]**            numeric        10299  0.00 %                
-
-        **[fBodyGyro-meanFreq()-Z]**            numeric        10299  0.00 %                
-
-        **[fBodyAccMag-mean()]**                numeric        10296  0.00 %                
-
-        **[fBodyAccMag-std()]**                 numeric        10298  0.00 %                
-
-        **[fBodyAccMag-meanFreq()]**            numeric        10299  0.00 %                
-
-        **[fBodyBodyAccJerkMag-mean()]**        numeric        10290  0.00 %                
-
-        **[fBodyBodyAccJerkMag-std()]**         numeric        10296  0.00 %                
-
-        **[fBodyBodyAccJerkMag-meanFreq()]**    numeric        10299  0.00 %                
-
-        **[fBodyBodyGyroMag-mean()]**           numeric        10297  0.00 %                
-
-        **[fBodyBodyGyroMag-std()]**            numeric        10296  0.00 %                
-
-        **[fBodyBodyGyroMag-meanFreq()]**       numeric        10299  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-mean()]**       numeric        10293  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-std()]**        numeric        10292  0.00 %                
-
-        **[fBodyBodyGyroJerkMag-meanFreq()]**   numeric        10299  0.00 %                
---------------------------------------------------------------------------------------------
+|Feature                 |   Result|
+|------------------------|---------|
+|Number of observations  |    10299|
+|Number of variables     |       81|
+*(7352 for trainHAR, 2947 for testHAR)*
+##### Summary Table:
+
+|Variable                       | Class     |                           
+|-------------------------------|-----------|
+|subjectID                      | integer   |
+|activityCode                   | integer   |
+|tBodyAcc-mean()-X              | numeric   |
+|tBodyAcc-mean()-Y              | numeric   |
+|tBodyAcc-mean()-Z              | numeric   |
+|tBodyAcc-std()-X               | numeric   |
+|tBodyAcc-std()-Y               | numeric   |
+|tBodyAcc-std()-Z               | numeric   |
+|tGravityAcc-mean()-X           | numeric   |
+|tGravityAcc-mean()-Y           | numeric   |
+|tGravityAcc-mean()-Z           | numeric   |
+|tGravityAcc-std()-X            | numeric   |
+|tGravityAcc-std()-Y            | numeric   |
+|tGravityAcc-std()-Z            | numeric   |
+|tBodyAccJerk-mean()-X          | numeric   |
+|tBodyAccJerk-mean()-Y          | numeric   |
+|tBodyAccJerk-mean()-Z          | numeric   |
+|tBodyAccJerk-std()-X           | numeric   |
+|tBodyAccJerk-std()-Y           | numeric   |
+|tBodyAccJerk-std()-Z           | numeric   |
+|tBodyGyro-mean()-X             | numeric   |
+|tBodyGyro-mean()-Y             | numeric   |
+|tBodyGyro-mean()-Z             | numeric   |
+|tBodyGyro-std()-X              | numeric   |
+|tBodyGyro-std()-Y              | numeric   |
+|tBodyGyro-std()-Z              | numeric   |
+|tBodyGyroJerk-mean()-X         | numeric   |
+|tBodyGyroJerk-mean()-Y         | numeric   |
+|tBodyGyroJerk-mean()-Z         | numeric   |
+|tBodyGyroJerk-std()-X          | numeric   |
+|tBodyGyroJerk-std()-Y          | numeric   |
+|tBodyGyroJerk-std()-Z          | numeric   |
+|tBodyAccMag-mean()             | numeric   |
+|tBodyAccMag-std()              | numeric   |
+|tGravityAccMag-mean()          | numeric   |
+|tGravityAccMag-std()           | numeric   |
+|tBodyAccJerkMag-mean()         | numeric   |
+|tBodyAccJerkMag-std()          | numeric   |
+|tBodyGyroMag-mean()            | numeric   |
+|tBodyGyroMag-std()             | numeric   |
+|tBodyGyroJerkMag-mean()        | numeric   |
+|tBodyGyroJerkMag-std()         | numeric   |
+|fBodyAcc-mean()-X              | numeric   |
+|fBodyAcc-mean()-Y              | numeric   |
+|fBodyAcc-mean()-Z              | numeric   |
+|fBodyAcc-std()-X               | numeric   |
+|fBodyAcc-std()-Y               | numeric   |
+|fBodyAcc-std()-Z               | numeric   |
+|fBodyAcc-meanFreq()-X          | numeric   |
+|fBodyAcc-meanFreq()-Y          | numeric   |
+|fBodyAcc-meanFreq()-Z          | numeric   |
+|fBodyAccJerk-mean()-X          | numeric   |
+|fBodyAccJerk-mean()-Y          | numeric   |
+|fBodyAccJerk-mean()-Z          | numeric   |
+|fBodyAccJerk-std()-X           | numeric   |
+|fBodyAccJerk-std()-Y           | numeric   |
+|fBodyAccJerk-std()-Z           | numeric   |
+|fBodyAccJerk-meanFreq()-X      | numeric   |
+|fBodyAccJerk-meanFreq()-Y      | numeric   |
+|fBodyAccJerk-meanFreq()-Z      | numeric   |
+|fBodyGyro-mean()-X             | numeric   |
+|fBodyGyro-mean()-Y             | numeric   |
+|fBodyGyro-mean()-Z             | numeric   |
+|fBodyGyro-std()-X              | numeric   |
+|fBodyGyro-std()-Y              | numeric   |
+|fBodyGyro-std()-Z              | numeric   |
+|fBodyGyro-meanFreq()-X         | numeric   |
+|fBodyGyro-meanFreq()-Y         | numeric   |
+|fBodyGyro-meanFreq()-Z         | numeric   |
+|fBodyAccMag-mean()             | numeric   |
+|fBodyAccMag-std()              | numeric   |
+|fBodyAccMag-meanFreq()         | numeric   |
+|fBodyBodyAccJerkMag-mean()     | numeric   |
+|fBodyBodyAccJerkMag-std()      | numeric   |
+|fBodyBodyAccJerkMag-meanFreq() | numeric   |
+|fBodyBodyGyroMag-mean()        | numeric   |
+|fBodyBodyGyroMag-std()         | numeric   |
+|fBodyBodyGyroMag-meanFreq()    | numeric   |
+|fBodyBodyGyroJerkMag-mean()    | numeric   |
+|fBodyBodyGyroJerkMag-std()     | numeric   |
+|fBodyBodyGyroJerkMag-meanFreq()| numeric   |
 
 ### meltHAR
 
 ##### Dimensions:
 
----------------------------------
-Feature                    Result
------------------------- --------
-Number of observations     813621
+|Feature                 |   Result|
+|------------------------|---------|
+|Number of observations  |  813621 |
+|Number of variables     |       4 |
 
-Number of variables             4
----------------------------------
 
-#### Summary table
-
--------------------------------------------------------------------------
-Label   Variable             Class       # unique  Missing  Description  
-                                           values                        
-------- -------------------- --------- ---------- --------- -------------
-        **[subjectID]**      integer           30  0.00 %                
-
-        **[activityCode]**   integer            6  0.00 %                
-
-        **[variable]**       factor            79  0.00 %                
-
-        **[value]**          numeric       783226  0.00 %                
--------------------------------------------------------------------------
+#### Summary Table:
+|Variable              | Class     |                           
+|----------------------|-----------|
+|subjectID             | integer   |
+|activityCode          | integer   |
+|variable              | factor    |                
+|value                 | numeric   |
 
 
 ##### tidyHARprep
 
 This data set has the same layout as the final file **tidyHAR** the only differences are in the field names which were modified for final output. The change that were made are:
 
-1. All fields that start with **[fBodyBody** where modified to **[fBody**, the fields affected are:
+1. All fields that start with |fBodyBody** where modified to fBody**, the fields affected are:
 
-* **[fBodyBodyAccJerkMag-std()]**                        
-* **[fBodyBodyAccJerkMag-meanFreq()]**                 
-* **[fBodyBodyGyroMag-mean()]**                         
-* **[fBodyBodyGyroMag-std()]**                         
-* **[fBodyBodyGyroMag-meanFreq()]**                      
-* **[fBodyBodyGyroJerkMag-mean()]**                     
-* **[fBodyBodyGyroJerkMag-std()]**                    
-* **[fBodyBodyGyroJerkMag-meanFreq()]**   
+* |fBodyBodyAccJerkMag-std()                        
+* |fBodyBodyAccJerkMag-meanFreq()                 
+* |fBodyBodyGyroMag-mean()                         
+* |fBodyBodyGyroMag-std()                         
+* |fBodyBodyGyroMag-meanFreq()                      
+* |fBodyBodyGyroJerkMag-mean()                     
+* |fBodyBodyGyroJerkMag-std()                    
+* |fBodyBodyGyroJerkMag-meanFreq()   
 
 2. All data fields were modified to add the verbiage **Average-** at the beginning. *(see summary for tidyHAR below)*
 
@@ -1487,263 +816,98 @@ The final clean data set
 
 ##### Dimensions:
 
----------------------------------
-Feature                    Result
------------------------- --------
-Number of observations        180
-
-Number of variables            82
----------------------------------
-
-##### Summary table:
-
--------------------------------------------------------------------------------------
-Label   Variable                       Class         # unique  Missing  Description  
-                                                       values                        
-------- ------------------------------ ----------- ---------- --------- -------------
-        **[subjectID]**                integer             30  0.00 %                
-
-        **[activityCode]**             integer              6  0.00 %                
-
-        **[activity]**                 character            6  0.00 %                
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAcc-mean-X]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAcc-mean-Y]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAcc-mean-Z]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAcc-std-X]**                                                            
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAcc-std-Y]**                                                            
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAcc-std-Z]**                                                            
-
-        **[Average-                    numeric            180  0.00 %                
-        tGravityAcc-mean-X]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        tGravityAcc-mean-Y]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        tGravityAcc-mean-Z]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        tGravityAcc-std-X]**                                                         
-
-        **[Average-                    numeric            180  0.00 %                
-        tGravityAcc-std-Y]**                                                         
-
-        **[Average-                    numeric            180  0.00 %                
-        tGravityAcc-std-Z]**                                                         
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccJerk-mean-X]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccJerk-mean-Y]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccJerk-mean-Z]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccJerk-std-X]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccJerk-std-Y]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccJerk-std-Z]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyro-mean-X]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyro-mean-Y]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyro-mean-Z]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyro-std-X]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyro-std-Y]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyro-std-Z]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroJerk-mean-X]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroJerk-mean-Y]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroJerk-mean-Z]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroJerk-std-X]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroJerk-std-Y]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroJerk-std-Z]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccMag-mean]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccMag-std]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        tGravityAccMag-mean]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        tGravityAccMag-std]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccJerkMag-mean]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyAccJerkMag-std]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroMag-mean]**                                                         
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroMag-std]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroJerkMag-mean]**                                                     
-
-        **[Average-                    numeric            180  0.00 %                
-        tBodyGyroJerkMag-std]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAcc-mean-X]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAcc-mean-Y]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAcc-mean-Z]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAcc-std-X]**                                                            
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAcc-std-Y]**                                                            
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAcc-std-Z]**                                                            
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAcc-meanFreq-X]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAcc-meanFreq-Y]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAcc-meanFreq-Z]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerk-mean-X]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerk-mean-Y]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerk-mean-Z]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerk-std-X]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerk-std-Y]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerk-std-Z]**                                                        
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerk-meanFreq-X]**                                                   
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerk-meanFreq-Y]**                                                   
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerk-meanFreq-Z]**                                                   
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyro-mean-X]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyro-mean-Y]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyro-mean-Z]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyro-std-X]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyro-std-Y]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyro-std-Z]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyro-meanFreq-X]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyro-meanFreq-Y]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyro-meanFreq-Z]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccMag-mean]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccMag-std]**                                                           
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccMag-meanFreq]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerkMag-mean]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerkMag-std]**                                                       
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyAccJerkMag-meanFreq]**                                                  
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyroMag-mean]**                                                         
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyroMag-std]**                                                          
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyroMag-meanFreq]**                                                     
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyroJerkMag-mean]**                                                     
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyroJerkMag-std]**                                                      
-
-        **[Average-                    numeric            180  0.00 %                
-        fBodyGyroJerkMag-meanFreq]**                                                 
--------------------------------------------------------------------------------------
+Feature                  |   Result|
+|------------------------|---------|
+|Number of observations  |     180 |
+|Number of variables     |      82 |
+
+
+##### Summary Table::
+
+|Variable                           | Class     |
+|-----------------------------------|-----------|
+|subjectID                          | integer   |
+|activityCode                       | integer   |
+|activity                           | character |
+|Average-tBodyAcc-mean-X            | numeric   |
+|Average-tBodyAcc-mean-Y            | numeric   |
+|Average-tBodyAcc-mean-Z            | numeric   |
+|Average-tBodyAcc-std-X             | numeric   |
+|Average-tBodyAcc-std-Y             | numeric   |
+|Average-tBodyAcc-std-Z             | numeric   |
+|Average-tGravityAcc-mean-X         | numeric   |
+|Average-tGravityAcc-mean-Y         | numeric   |
+|Average-tGravityAcc-mean-Z         | numeric   |
+|Average-tGravityAcc-std-X          | numeric   |
+|Average-tGravityAcc-std-Y          | numeric   |
+|Average-tGravityAcc-std-Z          | numeric   |
+|Average-tBodyAccJerk-mean-X        | numeric   |
+|Average-tBodyAccJerk-mean-Y        | numeric   |
+|Average-tBodyAccJerk-mean-Z        | numeric   |
+|Average-tBodyAccJerk-std-X         | numeric   |
+|Average-tBodyAccJerk-std-Y         | numeric   |
+|Average-tBodyAccJerk-std-Z         | numeric   |
+|Average-tBodyGyro-mean-X           | numeric   |
+|Average-tBodyGyro-mean-Y           | numeric   |
+|Average-tBodyGyro-mean-Z           | numeric   |
+|Average-tBodyGyro-std-X            | numeric   |
+|Average-tBodyGyro-std-Y            | numeric   |
+|Average-tBodyGyro-std-Z            | numeric   |
+|Average-tBodyGyroJerk-mean-X       | numeric   |
+|Average-tBodyGyroJerk-mean-Y       | numeric   |
+|Average-tBodyGyroJerk-mean-Z       | numeric   |
+|Average-tBodyGyroJerk-std-X        | numeric   |
+|Average-tBodyGyroJerk-std-Y        | numeric   |
+|Average-tBodyGyroJerk-std-Z        | numeric   |
+|Average-tBodyAccMag-mean           | numeric   |
+|Average-tBodyAccMag-std            | numeric   |
+|Average-tGravityAccMag-mean        | numeric   |
+|Average-tGravityAccMag-std         | numeric   |
+|Average-tBodyAccJerkMag-mean       | numeric   |
+|Average-tBodyAccJerkMag-std        | numeric   |
+|Average-tBodyGyroMag-mean          | numeric   |
+|Average-tBodyGyroMag-std           | numeric   |
+|Average-tBodyGyroJerkMag-mean      | numeric   |
+|Average-tBodyGyroJerkMag-std       | numeric   |
+|Average-fBody Acc-mean-X           | numeric   |
+|Average-fBody Acc-mean-Y           | numeric   |
+|Average-fBody Acc-mean-Z           | numeric   |
+|Average-fBody Acc-std-X            | numeric   |
+|Average-fBody Acc-std-Y            | numeric   |
+|Average-fBody Acc-std-Z            | numeric   |
+|Average-fBody Acc-meanFreq-X       | numeric   |
+|Average-fBody Acc-meanFreq-Y       | numeric   |
+|Average-fBody Acc-meanFreq-Z       | numeric   |
+|Average-fBody AccJerk-mean-X       | numeric   |
+|Average-fBody AccJerk-mean-Y       | numeric   |
+|Average-fBody AccJerk-mean-Z       | numeric   |
+|Average-fBody AccJerk-std-X        | numeric   |
+|Average-fBody AccJerk-std-Y        | numeric   |
+|Average-fBody AccJerk-std-Z        | numeric   |
+|Average-fBody AccJerk-meanFreq-X   | numeric   |
+|Average-fBody AccJerk-meanFreq-Y   | numeric   |
+|Average-fBody AccJerk-meanFreq-Z   | numeric   |
+|Average-fBody Gyro-mean-X          | numeric   |
+|Average-fBody Gyro-mean-Y          | numeric   |
+|Average-fBody Gyro-mean-Z          | numeric   |
+|Average-fBody Gyro-std-X           | numeric   |
+|Average-fBody Gyro-std-Y           | numeric   |
+|Average-fBody Gyro-std-Z           | numeric   |
+|Average-fBody Gyro-meanFreq-X      | numeric   |
+|Average-fBody Gyro-meanFreq-Y      | numeric   |
+|Average-fBody Gyro-meanFreq-Z      | numeric   |
+|Average-fBody AccMag-mean          | numeric   |
+|Average-fBody AccMag-std           | numeric   |
+|Average-fBody AccMag-meanFreq      | numeric   |
+|Average-fBody AccJerkMag-mean      | numeric   |
+|Average-fBody AccJerkMag-std       | numeric   |
+|Average-fBody AccJerkMag-meanFreq  | numeric   |
+|Average-fBody GyroMag-mean         | numeric   |
+|Average-fBody GyroMag-std          | numeric   |
+|Average-fBody GyroMag-meanFreq     | numeric   |
+|Average-fBody GyroJerkMag-mean     | numeric   |
+|Average-fBody GyroJerkMag-std      | numeric   |
+|Average-fBody GyroJerkMag-meanFreq | numeric   |
 
 
 ### Acknowledgments
