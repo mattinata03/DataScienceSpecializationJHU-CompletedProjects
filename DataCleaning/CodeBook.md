@@ -3,7 +3,7 @@
 
 #### Getting and Cleaning Data Course -- Final Project
 #### *Lisa Murray*
-
+ 
 ## Raw data files used in this project
 Description of the raw data files *(taken from the README.txt from the Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine study)* [1]
 
