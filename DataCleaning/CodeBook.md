@@ -1,9 +1,5 @@
----
-output:
-  html_document: default
----
 ## Creating a Tidy Data Set from Human Activity Recognition (HAR) Smartphone Data
-### CodeBook.md
+### CodeBook.Rmd
 
 #### Getting and Cleaning Data Course -- Final Project
 #### *Lisa Murray*
