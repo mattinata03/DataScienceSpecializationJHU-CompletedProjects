@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 ## Creating a Tidy Data Set from Human Activity Recognition (HAR) Smartphone Data
 ### CodeBook.md
 
 #### Getting and Cleaning Data Course -- Final Project
 #### *Lisa Murray*
+=======
+---
+title: "Creating a Tidy Data Set from Human Activity Recognition (HAR) Smartphone Data"
+author: "Lisa Murray"
+date: "7/4/2019"
+output: html_document
+---
+>>>>>>> bf3ec3aa1614bae96a3360bf31d01651d125ffc1
 
 ## Raw data files used in this project
 Description of the raw data files *(taken from the README.txt from the Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine study)* [1]
